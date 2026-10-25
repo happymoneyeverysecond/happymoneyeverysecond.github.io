@@ -97,7 +97,7 @@
       color: var(--text-2);
     }
 
-    nav {
+    .links {
       margin-top: 8px;
       padding-top: 16px;
       border-top: 1px solid var(--border);
@@ -113,40 +113,275 @@
     a {
       color: var(--accent);
     }
+    .lang-row {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .lang select {
+      padding: 4px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--text);
+      font: inherit;
+      font-size: 14px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
   <main>
+    <div class="lang-row"><label class="lang"><select aria-label="Language"><option value="zh" lang="zh-CN">简体中文</option><option value="zh-TW" lang="zh-TW">繁體中文</option><option value="en" lang="en">English</option><option value="ja" lang="ja">日本語</option><option value="ko" lang="ko">한국어</option><option value="es" lang="es">Español</option><option value="de" lang="de">Deutsch</option><option value="fr" lang="fr">Français</option><option value="pt" lang="pt">Português</option></select></label></div>
     <img src="icon.png" alt="">
-    <h1>秒薪 Paytick</h1>
-    <p>实时看到今天挣了多少钱，每一秒都在涨。</p>
-    <p lang="en">Watch your pay tick up, second by second.</p>
-    <section class="plans">
-      <div class="plan">
-        <h2>秒薪 · Windows <span lang="en">/ Paytick for Windows</span></h2>
-        <p class="price">免费 <span lang="en">/ Free</span></p>
-        <p>实时计薪、本周工资条、发薪倒计时、桌面悬浮窗和金币小秒。</p>
-        <p lang="en">Live earnings, weekly payslip, payday countdown, a floating desktop window and Tick the coin.</p>
+    <section data-lang="zh" lang="zh-CN">
+      <h1>秒薪 Paytick</h1>
+      <p class="tagline">实时看到今天挣了多少钱，每一秒都在涨。</p>
+      <div class="plans">
+        <div class="plan">
+          <h2>秒薪 · Windows</h2>
+          <p class="price">免费</p>
+          <p>实时计薪、本周工资条、发薪倒计时、桌面悬浮窗桌宠和金币小秒。</p>
+        </div>
+        <div class="plan">
+          <h2>秒薪 Pro</h2>
+          <p class="price">一次买断</p>
+          <p class="note">价格以付款页面显示的为准，含当地税费。</p>
+          <p>小鸟、小狗、小猫，卡通和像素画风，全部配色，更多气泡样式和昵称，大屏模式，换算显示货币，桌宠动作菜单和贴边躲藏。一个激活码用于 1 台电脑。</p>
+        </div>
+        <div class="plan">
+          <h2>秒薪 · 安卓</h2>
+          <p class="price">免费</p>
+          <p>部分角色和配色可以看广告解锁。</p>
+        </div>
       </div>
-      <div class="plan">
-        <h2>秒薪 Pro <span lang="en">/ Paytick Pro</span></h2>
-        <p class="price">一次买断 <span lang="en">/ One-time</span></p>
-        <p class="note">价格以付款页面显示的为准，含当地税费。<span lang="en">The price shown at checkout applies, including local taxes.</span></p>
-        <p>小鸟、小狗、小猫和像素画风，全部配色，更多气泡样式和昵称，大屏模式，换算显示货币，桌宠动作菜单和贴边躲藏。一个激活码用于 1 台电脑。</p>
-        <p lang="en">Birdie, Puppy and Kitty with pixel styles, all colors, more bubble styles and names, big screen mode, currency conversion, pet actions and edge hiding. One key works on 1 computer.</p>
-      </div>
-      <div class="plan">
-        <h2>秒薪 · 安卓 <span lang="en">/ Paytick for Android</span></h2>
-        <p class="price">免费 <span lang="en">/ Free</span></p>
-        <p>部分角色和配色可以看广告解锁。</p>
-        <p lang="en">Some pets and colors unlock by watching an ad.</p>
-      </div>
+      <p class="links"><a href="privacy/?lang=zh">隐私政策</a> · <a href="terms/?lang=zh">服务条款</a> · <a href="refund/?lang=zh">退款政策</a></p>
     </section>
-    <nav>
-      <a href="privacy/?lang=zh">隐私政策</a> · <a href="terms/?lang=zh">服务条款</a> · <a href="refund/?lang=zh">退款政策</a><br>
-      <a href="privacy/?lang=en" lang="en">Privacy Policy</a> · <a href="terms/?lang=en" lang="en">Terms of Service</a> · <a href="refund/?lang=en" lang="en">Refund Policy</a>
-      <p class="contact"><a href="mailto:happymoneyeverysecond@gmail.com">happymoneyeverysecond@gmail.com</a></p>
-    </nav>
+
+    <section hidden data-lang="en" lang="en">
+      <h1>Paytick</h1>
+      <p class="tagline">Watch your pay tick up, second by second.</p>
+      <div class="plans">
+        <div class="plan">
+          <h2>Paytick for Windows</h2>
+          <p class="price">Free</p>
+          <p>Live earnings, weekly payslip, payday countdown, a floating desktop pet and Tick the coin.</p>
+        </div>
+        <div class="plan">
+          <h2>Paytick Pro</h2>
+          <p class="price">One-time purchase</p>
+          <p class="note">The price shown at checkout applies, including local taxes.</p>
+          <p>Birdie, Puppy and Kitty, cartoon and pixel styles, all colors, more bubble styles and names, big screen mode, currency conversion, pet actions and edge hiding. One key works on 1 computer.</p>
+        </div>
+        <div class="plan">
+          <h2>Paytick for Android</h2>
+          <p class="price">Free</p>
+          <p>Some pets and colors unlock by watching an ad.</p>
+        </div>
+      </div>
+      <p class="links"><a href="privacy/?lang=en">Privacy Policy</a> · <a href="terms/?lang=en">Terms of Service</a> · <a href="refund/?lang=en">Refund Policy</a></p>
+    </section>
+
+    <section hidden data-lang="zh-TW" lang="zh-TW">
+      <h1>秒薪</h1>
+      <p class="tagline">看著薪水一秒一秒往上跳。</p>
+      <div class="plans">
+        <div class="plan">
+          <h2>秒薪 Windows 版</h2>
+          <p class="price">免費</p>
+          <p>即時收入、每週薪資單、發薪倒數、桌面浮動寵物，還有金幣吉祥物小秒。</p>
+        </div>
+        <div class="plan">
+          <h2>秒薪 Pro</h2>
+          <p class="price">一次買斷</p>
+          <p class="note">價格以結帳時顯示的金額為準，含當地稅金。</p>
+          <p>小鳥、小狗和小貓，卡通與像素畫風，全部配色，更多氣泡樣式與暱稱，大螢幕模式，貨幣換算，桌寵動作及貼邊躲藏。一組授權碼可在 1 台電腦上使用。</p>
+        </div>
+        <div class="plan">
+          <h2>秒薪 Android 版</h2>
+          <p class="price">免費</p>
+          <p>部分桌寵和配色可透過觀看廣告解鎖。</p>
+        </div>
+      </div>
+      <p class="links"><a href="privacy/?lang=zh-TW">隱私權政策</a> · <a href="terms/?lang=zh-TW">服務條款</a> · <a href="refund/?lang=zh-TW">退款政策</a></p>
+    </section>
+
+    <section hidden data-lang="ja" lang="ja">
+      <h1>Paytick</h1>
+      <p class="tagline">お給料が1秒ごとに増えていくのを、リアルタイムで。</p>
+      <div class="plans">
+        <div class="plan">
+          <h2>Paytick Windows版</h2>
+          <p class="price">無料</p>
+          <p>リアルタイム収入、週ごとの給与明細、給料日カウントダウン、デスクトップに浮かぶペット、金貨のチクタ。</p>
+        </div>
+        <div class="plan">
+          <h2>Paytick Pro</h2>
+          <p class="price">買い切り</p>
+          <p class="note">購入手続き時に表示される価格（現地の税金を含む）が適用されます。</p>
+          <p>ことり・こいぬ・こねこ、イラストとドット絵の絵柄、すべてのカラー、吹き出しスタイルと名前の追加、大画面モード、通貨換算、ペットのアクション、画面端に隠れる機能。1つのキーで1台のPCに使えます。</p>
+        </div>
+        <div class="plan">
+          <h2>Paytick Android版</h2>
+          <p class="price">無料</p>
+          <p>一部のペットとカラーは、広告を見ると解放されます。</p>
+        </div>
+      </div>
+      <p class="links"><a href="privacy/?lang=ja">プライバシーポリシー</a> · <a href="terms/?lang=ja">利用規約</a> · <a href="refund/?lang=ja">返金ポリシー</a></p>
+    </section>
+
+    <section hidden data-lang="ko" lang="ko">
+      <h1>Paytick</h1>
+      <p class="tagline">1초마다 오르는 내 급여를 지켜보세요.</p>
+      <div class="plans">
+        <div class="plan">
+          <h2>Windows용 Paytick</h2>
+          <p class="price">무료</p>
+          <p>실시간 수입, 주간 급여 명세서, 급여일 카운트다운, 화면 위에 떠 있는 데스크톱 펫, 금화 째깍이까지 담았어요.</p>
+        </div>
+        <div class="plan">
+          <h2>Paytick Pro</h2>
+          <p class="price">1회 구매</p>
+          <p class="note">결제 화면에 표시되는 가격(현지 세금 포함)이 적용돼요.</p>
+          <p>짹짹이, 멍멍이, 야옹이, 카툰·픽셀 그림체, 모든 색상, 더 많은 말풍선 스타일과 이름 짓기, 큰 화면 모드, 통화 변환, 펫 동작, 화면 가장자리에 숨기까지. 키 하나로 컴퓨터 1대에서 사용할 수 있어요.</p>
+        </div>
+        <div class="plan">
+          <h2>Android용 Paytick</h2>
+          <p class="price">무료</p>
+          <p>일부 펫과 색상은 광고를 보면 잠금 해제돼요.</p>
+        </div>
+      </div>
+      <p class="links"><a href="privacy/?lang=ko">개인정보 처리방침</a> · <a href="terms/?lang=ko">서비스 이용약관</a> · <a href="refund/?lang=ko">환불 정책</a></p>
+    </section>
+
+    <section hidden data-lang="es" lang="es">
+      <h1>Paytick</h1>
+      <p class="tagline">Mira cómo sube tu sueldo, segundo a segundo.</p>
+      <div class="plans">
+        <div class="plan">
+          <h2>Paytick para Windows</h2>
+          <p class="price">Gratis</p>
+          <p>Ingresos en vivo, recibo de pago semanal, cuenta regresiva hasta el día de pago, una mascota flotante en el escritorio y Tic, la moneda.</p>
+        </div>
+        <div class="plan">
+          <h2>Paytick Pro</h2>
+          <p class="price">Compra única</p>
+          <p class="note">Se aplica el precio que se muestra al pagar, incluidos los impuestos locales.</p>
+          <p>Pajarito, Perrito y Gatito, estilos dibujo y píxel, todos los colores, más estilos de globo y nombres, modo pantalla grande, conversión de moneda, acciones de la mascota y esconderla en el borde de la pantalla. Una clave funciona en 1 equipo.</p>
+        </div>
+        <div class="plan">
+          <h2>Paytick para Android</h2>
+          <p class="price">Gratis</p>
+          <p>Algunas mascotas y colores se desbloquean viendo un anuncio.</p>
+        </div>
+      </div>
+      <p class="links"><a href="privacy/?lang=es">Política de privacidad</a> · <a href="terms/?lang=es">Términos del servicio</a> · <a href="refund/?lang=es">Política de reembolso</a></p>
+    </section>
+
+    <section hidden data-lang="de" lang="de">
+      <h1>Paytick</h1>
+      <p class="tagline">Sieh zu, wie dein Lohn wächst – Sekunde für Sekunde.</p>
+      <div class="plans">
+        <div class="plan">
+          <h2>Paytick für Windows</h2>
+          <p class="price">Kostenlos</p>
+          <p>Live-Verdienst, wöchentlicher Lohnzettel, Countdown bis zum Zahltag, ein schwebendes Desktop-Haustier und die Münze Tick.</p>
+        </div>
+        <div class="plan">
+          <h2>Paytick Pro</h2>
+          <p class="price">Einmalkauf</p>
+          <p class="note">Es gilt der beim Bezahlen angezeigte Preis inklusive lokaler Steuern.</p>
+          <p>Piepsi, Hundi und Miezi, Cartoon- und Pixel-Stil, alle Farben, mehr Sprechblasen-Stile und Namen, Vollbildmodus, Währungsumrechnung, Haustier-Aktionen und Verstecken am Bildschirmrand. Ein Schlüssel gilt für 1 Computer.</p>
+        </div>
+        <div class="plan">
+          <h2>Paytick für Android</h2>
+          <p class="price">Kostenlos</p>
+          <p>Einige Haustiere und Farben schaltest du frei, indem du eine Werbung ansiehst.</p>
+        </div>
+      </div>
+      <p class="links"><a href="privacy/?lang=de">Datenschutzerklärung</a> · <a href="terms/?lang=de">Nutzungsbedingungen</a> · <a href="refund/?lang=de">Rückerstattungsrichtlinie</a></p>
+    </section>
+
+    <section hidden data-lang="fr" lang="fr">
+      <h1>Paytick</h1>
+      <p class="tagline">Regarde ta paie grimper, seconde après seconde.</p>
+      <div class="plans">
+        <div class="plan">
+          <h2>Paytick pour Windows</h2>
+          <p class="price">Gratuit</p>
+          <p>Gains en direct, fiche de paie de la semaine, compte à rebours jusqu’au jour de paie, une mascotte de bureau flottante et Tic la pièce d’or.</p>
+        </div>
+        <div class="plan">
+          <h2>Paytick Pro</h2>
+          <p class="price">Achat unique</p>
+          <p class="note">Le prix affiché lors du paiement s’applique, taxes locales comprises.</p>
+          <p>Piou, Toutou et Minou, styles cartoon et pixel, toutes les couleurs, plus de styles de bulle et de surnoms, mode grand écran, conversion de devise, actions de la mascotte et cachette au bord de l’écran. Une clé fonctionne sur 1 ordinateur.</p>
+        </div>
+        <div class="plan">
+          <h2>Paytick pour Android</h2>
+          <p class="price">Gratuit</p>
+          <p>Certaines mascottes et couleurs se débloquent en regardant une pub.</p>
+        </div>
+      </div>
+      <p class="links"><a href="privacy/?lang=fr">Politique de confidentialité</a> · <a href="terms/?lang=fr">Conditions d’utilisation</a> · <a href="refund/?lang=fr">Politique de remboursement</a></p>
+    </section>
+
+    <section hidden data-lang="pt" lang="pt">
+      <h1>Paytick</h1>
+      <p class="tagline">Veja seu salário subir, segundo a segundo.</p>
+      <div class="plans">
+        <div class="plan">
+          <h2>Paytick para Windows</h2>
+          <p class="price">Grátis</p>
+          <p>Ganhos ao vivo, holerite semanal, contagem regressiva até o pagamento, um pet flutuante na área de trabalho e a moedinha Tique.</p>
+        </div>
+        <div class="plan">
+          <h2>Paytick Pro</h2>
+          <p class="price">Compra única</p>
+          <p class="note">Vale o preço exibido na finalização da compra, com os impostos locais incluídos.</p>
+          <p>Piu, Totó e Mimi, estilos desenho e pixel, todas as cores, mais estilos de balão e apelidos, modo telão, conversão de moeda, ações do pet e esconder na borda. Uma chave funciona em 1 computador.</p>
+        </div>
+        <div class="plan">
+          <h2>Paytick para Android</h2>
+          <p class="price">Grátis</p>
+          <p>Alguns pets e cores são desbloqueados assistindo a um anúncio.</p>
+        </div>
+      </div>
+      <p class="links"><a href="privacy/?lang=pt">Política de Privacidade</a> · <a href="terms/?lang=pt">Termos de Serviço</a> · <a href="refund/?lang=pt">Política de Reembolso</a></p>
+    </section>
+    <p class="contact"><a href="mailto:happymoneyeverysecond@gmail.com">happymoneyeverysecond@gmail.com</a></p>
   </main>
+
+  <script>
+    // 显示哪种语言：网址里的 ?lang=…优先（App 里的链接会带上），否则按浏览器语言；换语言时改网址，分享出去还是这个语言
+    (function () {
+      var codes = ["zh", "zh-TW", "en", "ja", "ko", "es", "de", "fr", "pt"];
+      function detect(tag) {
+        tag = String(tag || '').toLowerCase().replace(/_/g, '-');
+        if (/^zh-(tw|hk|mo|hant)/.test(tag)) return 'zh-TW';
+        if (/^zh/.test(tag)) return 'zh';
+        var base = tag.split('-')[0];
+        return codes.indexOf(base) >= 0 ? base : 'en';
+      }
+      var param = new URLSearchParams(location.search).get('lang');
+      if (param === 'zh-CN') param = 'zh';
+      var select = document.querySelector('.lang select');
+      function show(next) {
+        var block;
+        document.querySelectorAll('main [data-lang]').forEach(function (el) {
+          el.hidden = el.dataset.lang !== next;
+          if (!el.hidden) block = el;
+        });
+        select.value = next;
+        document.documentElement.lang = block.lang;
+        document.title = next === 'zh' || next === 'zh-TW' ? '秒薪 Paytick' : 'Paytick';
+      }
+      select.addEventListener('change', function () {
+        show(select.value);
+        history.replaceState(null, '', '?lang=' + select.value);
+      });
+      show(codes.indexOf(param) >= 0 ? param : detect(navigator.language));
+    })();
+  </script>
 </body>
 </html>

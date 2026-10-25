@@ -75,21 +75,15 @@
       gap: 4px;
     }
 
-    .lang button {
+    .lang select {
       padding: 4px 12px;
       border: 1px solid var(--border);
       border-radius: 999px;
-      background: none;
-      color: var(--text-2);
+      background: var(--surface);
+      color: var(--text);
       font: inherit;
       font-size: 14px;
       cursor: pointer;
-    }
-
-    .lang button[aria-pressed="true"] {
-      border-color: var(--accent);
-      color: var(--accent);
-      font-weight: 600;
     }
 
     h1 {
@@ -130,13 +124,10 @@
   <main>
     <header>
       <a class="brand" href="../"><img src="../icon.png" alt="">秒薪 Paytick</a>
-      <div class="lang" role="group" aria-label="Language">
-        <button type="button" data-lang="zh">中文</button>
-        <button type="button" data-lang="en">English</button>
-      </div>
+      <label class="lang"><select aria-label="Language"><option value="zh" lang="zh-CN">简体中文</option><option value="zh-TW" lang="zh-TW">繁體中文</option><option value="en" lang="en">English</option><option value="ja" lang="ja">日本語</option><option value="ko" lang="ko">한국어</option><option value="es" lang="es">Español</option><option value="de" lang="de">Deutsch</option><option value="fr" lang="fr">Français</option><option value="pt" lang="pt">Português</option></select></label>
     </header>
 
-    <!-- ───────────── 中文 ───────────── -->
+    <!-- ───────────── 简体中文 ───────────── -->
     <article lang="zh-CN" data-lang="zh">
       <h1>隐私政策</h1>
       <p class="date">生效日期：2026 年 10 月 24 日</p>
@@ -205,6 +196,78 @@
 
       <h2>10. 联系我们</h2>
       <p>对本隐私政策有任何疑问，请发邮件至 <a href="mailto:happymoneyeverysecond@gmail.com">happymoneyeverysecond@gmail.com</a>。</p>
+    </article>
+
+    <!-- ───────────── 繁體中文 ───────────── -->
+    <article lang="zh-TW" data-lang="zh-TW" hidden>
+      <h1>隱私權政策</h1>
+      <p class="date">生效日期：2026年10月24日</p>
+      <p class="note">本頁為方便您閱讀而提供的翻譯版本。如與英文版有任何不一致，以英文版為準。<a href="?lang=en">閱讀英文版</a></p>
+
+      <p>本隱私權政策適用於秒薪（英文名稱 Paytick），包括 Android 應用程式（套件名稱 com.paytick）及 Windows 桌面應用程式（以下合稱「本 App」）。本 App 會依據您的薪資和作息，即時顯示您已賺取的金額。我們盡可能少收集資料：本 App 沒有帳號，您輸入的資訊永遠不會離開您的裝置。</p>
+
+      <h2>1. 您在本 App 中輸入的資訊</h2>
+      <p>您的薪資、幣別、工作日、工作時間、發薪日、寵物暱稱及外觀偏好設定，僅儲存在您自己的裝置上（在 Android 上儲存於本 App 的本機儲存空間，在 Windows 上儲存於您的使用者資料資料夾）。我們不會上傳、收集或存取這些資訊，也沒有任何儲存這些資訊的伺服器。解除安裝本 App（或刪除桌面應用程式的資料資料夾）即會刪除這些資訊。</p>
+
+      <h2>2. 匯率（選用）</h2>
+      <p>只有當您在「設定」中為「顯示為」選擇其他貨幣，並將「匯率」設為「自動更新」時，本 App 才會連線至 ExchangeRate-API（open.er-api.com）以取得公開的匯率資料。該請求只包含貨幣代碼（例如 NZD），絕不包含您的薪資或任何其他設定。與造訪任何網站一樣，對方的伺服器可以看到您的 IP 位址。請參閱<a href="https://www.exchangerate-api.com/terms" target="_blank" rel="noopener">ExchangeRate-API 的條款與隱私權資訊</a>。</p>
+
+      <h2>3. 廣告</h2>
+      <p><strong>Android 應用程式</strong>使用 Google AdMob 顯示橫幅廣告和獎勵廣告（觀看獎勵廣告可解鎖角色、配色及其他外觀選項）。Google 作為第三方，可能透過其軟體開發套件（SDK）收集並處理下列資料：</p>
+      <ul>
+        <li>裝置識別碼，包括廣告 ID；</li>
+        <li>裝置與應用程式資訊（型號、作業系統版本、語言、應用程式版本等）；</li>
+        <li>IP 位址及據此推算出的大致位置；</li>
+        <li>廣告互動與診斷資料（廣告曝光、點擊、載入效能及當機資訊）。</li>
+      </ul>
+      <p>這些資料用於顯示廣告、評估廣告成效、防範詐欺與濫用，並在您同意的情況下用於個人化廣告。Google 依據其自身的隱私權政策處理這些資料；我們不會收到可識別您個人身分的資訊。請參閱<a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google 如何使用採用其服務的網站或應用程式所提供的資訊</a>及<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隱私權政策</a>。</p>
+      <p>您可以透過下列方式控制 Android 應用程式中的廣告資料：</p>
+      <ul>
+        <li>在歐洲經濟區、英國及瑞士，本 App 會在您首次開啟時，透過 Google 的同意管理工具徵求您的同意。您可以隨時在「設定 → 廣告隱私權選項」中變更您的選擇。</li>
+        <li>在 Android 的「設定 → 隱私權 → 廣告」中，您可以刪除或重設您的廣告 ID，或選擇停用個人化廣告。</li>
+      </ul>
+      <p><strong>Windows 桌面應用程式</strong>的免費版使用 Liftoff Monetize（前身為 Vungle）顯示獎勵影片廣告和插頁式廣告。觀看獎勵影片可解鎖角色、配色、其他外觀選項及部分功能；插頁式廣告只會偶爾出現，且顯示頻率設有上限。Liftoff 作為第三方，可能透過其 SDK 收集並處理下列資料：</p>
+      <ul>
+        <li>裝置識別碼：Windows 廣告 ID（如果您已開啟），以及 Windows 僅為本 App 產生的硬體識別碼（ASHWID，用於限制同一則廣告的顯示次數及防範詐欺）；</li>
+        <li>裝置資訊：電腦品牌與型號、作業系統版本、語言與地區、時區、螢幕尺寸、電池電量與省電模式狀態、可用儲存空間及網路連線類型；</li>
+        <li>IP 位址及據此推算出的大致位置；</li>
+        <li>廣告互動與診斷資料（廣告曝光、點擊、播放及載入效能）。</li>
+      </ul>
+      <p>這些資料用於顯示廣告、評估廣告成效、防範詐欺與濫用，並在您同意的情況下用於個人化廣告。Liftoff 依據其自身的隱私權政策處理這些資料；我們不會收到可識別您個人身分的資訊。請參閱<a href="https://liftoff.io/privacy-policy/" target="_blank" rel="noopener">Liftoff 隱私權政策</a>。</p>
+      <p>您可以透過下列方式控制桌面應用程式中的廣告資料：</p>
+      <ul>
+        <li>在歐洲經濟區、英國及瑞士，只有在您同意的情況下才會顯示個人化廣告。</li>
+        <li>在 Windows 的「設定 → 隱私權與安全性 → 一般」中，關閉「讓應用程式使用我的廣告識別碼為我顯示個人化廣告」。</li>
+        <li>在 <a href="https://liftoff.ai/opt-out/" target="_blank" rel="noopener">Liftoff 的選擇退出頁面</a>上，選擇退出興趣導向廣告。</li>
+        <li>使用秒薪 Pro 時，桌面應用程式完全不會載入廣告 SDK，也不會傳送任何資料給 Liftoff。</li>
+      </ul>
+      <p>Liftoff 僅用於 Windows 桌面應用程式；Android 應用程式不使用 Liftoff。</p>
+
+      <h2>4. 秒薪 Pro 的購買與啟用（桌面應用程式）</h2>
+      <p>Windows 桌面應用程式可免費使用，您也可以選擇一次性購買「秒薪 Pro」，以解鎖所有寵物、畫風與功能並移除廣告。購買交易由 Dodo Payments 以登記商家（merchant of record）的身分處理：您在其結帳頁面輸入的姓名、電子郵件及付款資訊，均由 Dodo Payments 收集與處理。我們僅會收到訂單資訊（例如所購買的產品及您的電子郵件，用於客戶支援），絕不會看到您的卡片資料。請參閱<a href="https://dodopayments.com/legal/privacy-policy" target="_blank" rel="noopener">Dodo Payments 隱私權政策</a>。</p>
+      <p>當您在本 App 中啟用 Pro 時，本 App 會將您的授權碼及這台電腦的名稱傳送給 Dodo Payments，以確認授權碼有效，並記錄授權碼是在哪一台電腦上啟用（您可以隨時使用「在這台電腦上停用」釋出授權碼，以便將其轉移到其他電腦）。本 App 每隔幾天會連線確認授權碼仍然有效（例如未曾退款）。您的授權碼與啟用紀錄僅儲存在您的電腦上。</p>
+
+      <h2>5. 權限</h2>
+      <ul>
+        <li><strong>網路存取</strong>：用於顯示廣告、在啟用時取得匯率，以及在桌面版上啟用秒薪 Pro。</li>
+        <li><strong>在其他應用程式上層顯示（浮動視窗）</strong>：僅在您開啟「離開 App 時顯示浮動視窗」後才會使用，用於在主畫面上顯示您的寵物和收入。本 App 不會讀取其他應用程式的內容。</li>
+        <li>在 Windows 上，「開機時自動啟動」僅會在您開啟後，將本 App 加入您的啟動項目。</li>
+      </ul>
+
+      <h2>6. 我們不會做的事</h2>
+      <p>我們不會出售您的資料、不會與任何人分享您的薪資或設定，也不會利用本 App 追蹤您在其他應用程式或網站上的活動。除上述的 Google AdMob、Liftoff Monetize、匯率服務及 Dodo Payments 外，本 App 不會傳送任何資料給第三方。</p>
+
+      <h2>7. 兒童</h2>
+      <p>本 App 的使用對象為在職的成年人，並非以 13 歲以下兒童為對象，我們也不會在知情的情況下收集兒童的個人資訊。</p>
+
+      <h2>8. 資料安全與保存</h2>
+      <p>您的設定會一直保留在您的裝置上，直到您變更設定、清除本 App 的資料或解除安裝本 App 為止。我們沒有經營任何存放使用者資料的伺服器。</p>
+
+      <h2>9. 本政策的變更</h2>
+      <p>如本政策有所變更，我們將更新本頁面及上方的生效日期。重大變更將在本 App 的版本資訊中說明。</p>
+
+      <h2>10. 聯絡我們</h2>
+      <p>如果您對本隱私權政策有任何疑問，請寄送電子郵件至 <a href="mailto:happymoneyeverysecond@gmail.com">happymoneyeverysecond@gmail.com</a>。</p>
     </article>
 
     <!-- ───────────── English ───────────── -->
@@ -277,27 +340,469 @@
       <h2>10. Contact</h2>
       <p>If you have any questions about this Privacy Policy, please email <a href="mailto:happymoneyeverysecond@gmail.com">happymoneyeverysecond@gmail.com</a>.</p>
     </article>
+
+    <!-- ───────────── 日本語 ───────────── -->
+    <article lang="ja" data-lang="ja" hidden>
+      <h1>プライバシーポリシー</h1>
+      <p class="date">施行日：2026年10月24日</p>
+      <p class="note">これはお客様の便宜のための翻訳です。英語版と内容が異なる場合は、英語版が優先されます。<a href="?lang=en">英語版を読む</a></p>
+
+      <p>本プライバシーポリシーは、Androidアプリ（パッケージ com.paytick）およびWindowsデスクトップアプリを含むPaytick（中国語名：秒薪）（以下総称して「本アプリ」）に適用されます。本アプリは、お客様の給与と勤務スケジュールに基づいて、稼いだ金額をリアルタイムで表示します。当方が収集する情報は可能な限り最小限です。本アプリにはアカウントがなく、お客様が入力した情報がお客様のデバイスの外に出ることはありません。</p>
+
+      <h2>1. 本アプリに入力する情報</h2>
+      <p>お客様の給与、通貨、勤務日、勤務時間、給料日、ペットのニックネーム、外観の設定は、お客様ご自身のデバイス上（Androidではアプリのローカルストレージ、Windowsではユーザーデータフォルダ）にのみ保存されます。当方はこれらの情報をアップロードまたは収集することはなく、これらの情報にアクセスすることもできません。また、これらの情報を保存するサーバーも保有していません。本アプリをアンインストールする（またはデスクトップアプリのデータフォルダを削除する）と、これらの情報は削除されます。</p>
+
+      <h2>2. 為替レート（任意）</h2>
+      <p>お客様が設定で「表示通貨」に別の通貨を選び、「為替レート」を「自動」に設定した場合に限り、本アプリは公開されている為替レートデータを取得するためにExchangeRate-API（open.er-api.com）に接続します。このリクエストに含まれるのは通貨コード（例：NZD）のみであり、お客様の給与やその他の設定が含まれることは一切ありません。他のウェブサイトと同様に、同社のサーバーはお客様のIPアドレスを確認できます。詳しくは<a href="https://www.exchangerate-api.com/terms" target="_blank" rel="noopener">ExchangeRate-APIの利用規約およびプライバシー情報</a>をご覧ください。</p>
+
+      <h2>3. 広告</h2>
+      <p><strong>Androidアプリ</strong>は、Google AdMobを使用してバナー広告とリワード広告を表示します（リワード広告を視聴すると、キャラクター、カラー、その他の外観オプションが解放されます）。第三者であるGoogleは、そのソフトウェア開発キット（SDK）を通じて、以下のデータを収集および処理する場合があります。</p>
+      <ul>
+        <li>広告IDを含むデバイス識別子</li>
+        <li>デバイスおよびアプリの情報（機種、OSバージョン、言語、アプリのバージョンなど）</li>
+        <li>IPアドレス、およびそこから推定されるおおよその位置情報</li>
+        <li>広告のインタラクションデータおよび診断データ（広告の表示回数、クリック、読み込みのパフォーマンス、クラッシュ情報）</li>
+      </ul>
+      <p>これらのデータは、広告の表示、広告効果の測定、不正行為および不正利用の防止に使用され、お客様が同意した場合には広告のパーソナライズにも使用されます。Googleは、これらのデータを同社のプライバシーポリシーに基づいて処理します。当方が、お客様個人を特定できる情報を受け取ることはありません。詳しくは<a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Googleのサービスを使用するサイトやアプリから収集した情報のGoogleによる使用方法</a>および<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Googleプライバシーポリシー</a>をご覧ください。</p>
+      <p>Androidアプリでは、以下の方法で広告データを管理できます。</p>
+      <ul>
+        <li>欧州経済領域（EEA）、英国、スイスでは、本アプリを初めて開いたときに、Googleの同意管理ツールを通じてお客様の同意を求めます。選択内容は、「設定 → 広告のプライバシー設定」からいつでも変更できます。</li>
+        <li>Androidの「設定 → プライバシー → 広告」で、広告IDの削除やリセット、またはパーソナライズド広告のオプトアウトができます。</li>
+      </ul>
+      <p><strong>Windowsデスクトップアプリ</strong>の無料版は、Liftoff Monetize（旧Vungle）を使用してリワード動画広告とインタースティシャル広告を表示します。リワード動画を視聴すると、キャラクター、カラー、その他の外観オプション、および一部の機能が解放されます。インタースティシャル広告はときどき表示されるのみで、表示頻度には上限が設けられています。第三者であるLiftoffは、そのSDKを通じて、以下のデータを収集および処理する場合があります。</p>
+      <ul>
+        <li>デバイス識別子：Windowsの広告ID（お客様がオンにしている場合）、およびWindowsが本アプリ専用に生成するハードウェア識別子（ASHWID。同じ広告の表示頻度の制限および不正行為の防止に使用されます）</li>
+        <li>デバイス情報：コンピューターのメーカーと機種、OSバージョン、言語と地域、タイムゾーン、画面サイズ、バッテリー残量とバッテリー節約機能の状態、ストレージの空き容量、ネットワーク接続の種類</li>
+        <li>IPアドレス、およびそこから推定されるおおよその位置情報</li>
+        <li>広告のインタラクションデータおよび診断データ（広告の表示回数、クリック、再生と読み込みのパフォーマンス）</li>
+      </ul>
+      <p>これらのデータは、広告の表示、広告効果の測定、不正行為および不正利用の防止に使用され、お客様が同意した場合には広告のパーソナライズにも使用されます。Liftoffは、これらのデータを同社のプライバシーポリシーに基づいて処理します。当方が、お客様個人を特定できる情報を受け取ることはありません。詳しくは<a href="https://liftoff.io/privacy-policy/" target="_blank" rel="noopener">Liftoffのプライバシーポリシー</a>をご覧ください。</p>
+      <p>デスクトップアプリでは、以下の方法で広告データを管理できます。</p>
+      <ul>
+        <li>欧州経済領域、英国、スイスでは、パーソナライズド広告はお客様の同意がある場合にのみ表示されます。</li>
+        <li>Windowsの「設定 → プライバシーとセキュリティ → 全般」で、「広告IDを使用して、パーソナライズされた広告をアプリに表示させる」（英語表記：Let apps show me personalized ads by using my advertising ID）をオフにします。</li>
+        <li><a href="https://liftoff.ai/opt-out/" target="_blank" rel="noopener">Liftoffのオプトアウトページ</a>で、興味・関心に基づく広告をオプトアウトできます。</li>
+        <li>Paytick Proをご利用の場合、デスクトップアプリは広告SDKを一切読み込まず、Liftoffにデータを送信しません。</li>
+      </ul>
+      <p>LiftoffはWindowsデスクトップアプリでのみ使用されており、AndroidアプリではLiftoffを使用していません。</p>
+
+      <h2>4. Paytick Proの購入とライセンス認証（デスクトップアプリ）</h2>
+      <p>Windowsデスクトップアプリは無料でご利用いただけます。任意で「Paytick Pro」を1回購入すると、すべてのペット、絵柄、機能が解放され、広告が表示されなくなります。購入は、販売者（Merchant of Record）であるDodo Paymentsが取り扱います。同社の購入手続きページで入力された氏名、メールアドレス、支払い情報は、Dodo Paymentsが収集および処理します。当方が受け取るのは注文情報（購入された製品や、カスタマーサポートのためのメールアドレスなど）のみであり、当方がお客様のカード情報を目にすることはありません。詳しくは<a href="https://dodopayments.com/legal/privacy-policy" target="_blank" rel="noopener">Dodo Paymentsのプライバシーポリシー</a>をご覧ください。</p>
+      <p>本アプリでProを有効化すると、キーが有効であることを確認し、どのコンピューターで有効化されているかを記録するために、本アプリはお客様のライセンスキーとこのコンピューターの名前をDodo Paymentsに送信します（「このPCで無効化」を使っていつでも解除でき、別のコンピューターに移すことができます）。本アプリは数日ごとに、キーが引き続き有効であること（例えば、返金されていないこと）をオンラインで確認します。お客様のライセンスキーと有効化の記録は、お客様のコンピューターにのみ保存されます。</p>
+
+      <h2>5. 権限</h2>
+      <ul>
+        <li><strong>ネットワークアクセス</strong>：広告の表示、為替レートの取得（有効にした場合）、およびデスクトップでのPaytick Proの有効化のために使用します。</li>
+        <li><strong>他のアプリの上に重ねて表示（フローティングウィンドウ）</strong>：お客様が「アプリ外にペットを表示」をオンにした後にのみ、ホーム画面にペットと収入を表示するために使用します。本アプリが他のアプリの内容を読み取ることはありません。</li>
+        <li>Windowsでは、「PC起動時に自動で起動」は、お客様がオンにした後にのみ、本アプリをスタートアップ項目に追加します。</li>
+      </ul>
+
+      <h2>6. 当方が行わないこと</h2>
+      <p>当方は、お客様のデータを販売したり、お客様の給与や設定を誰かと共有したり、本アプリを使用して他のアプリやウェブサイトをまたいでお客様の行動を追跡したりすることはありません。上記のGoogle AdMob、Liftoff Monetize、為替レートサービス、Dodo Paymentsを除き、本アプリが第三者にデータを送信することはありません。</p>
+
+      <h2>7. お子様について</h2>
+      <p>本アプリは、働く成人を対象としています。13歳未満のお子様を対象としたものではなく、当方がお子様から個人情報を故意に収集することはありません。</p>
+
+      <h2>8. データのセキュリティと保存期間</h2>
+      <p>お客様の設定は、お客様が変更するか、アプリのデータを消去するか、本アプリをアンインストールするまで、お客様のデバイス上に保存されます。当方は、ユーザーデータを保持するサーバーを一切運用していません。</p>
+
+      <h2>9. 本ポリシーの変更</h2>
+      <p>本ポリシーを変更する場合、当方はこのページおよび上記の施行日を更新します。重要な変更については、本アプリのリリースノートでお知らせします。</p>
+
+      <h2>10. お問い合わせ</h2>
+      <p>本プライバシーポリシーについてご質問がある場合は、<a href="mailto:happymoneyeverysecond@gmail.com">happymoneyeverysecond@gmail.com</a>までメールでお問い合わせください。</p>
+    </article>
+
+    <!-- ───────────── 한국어 ───────────── -->
+    <article lang="ko" data-lang="ko" hidden>
+      <h1>개인정보 처리방침</h1>
+      <p class="date">시행일: 2026년 10월 24일</p>
+      <p class="note">이 번역은 이해를 돕기 위해 제공됩니다. 영어 원문과 내용이 다를 경우 영어 원문이 우선 적용됩니다. <a href="?lang=en">영어 원문 보기</a></p>
+
+      <p>이 개인정보 처리방침은 Android 앱(패키지 com.paytick)과 Windows 데스크톱 앱(이하 통칭 “앱”)을 포함한 Paytick(중국어 이름 秒薪)에 적용됩니다. 앱은 입력한 급여와 근무 일정을 바탕으로 지금까지 번 금액을 실시간으로 보여 줍니다. 저희는 정보를 최대한 적게 수집합니다. 앱에는 계정이 없으며, 입력한 정보는 절대 기기 밖으로 나가지 않습니다.</p>
+
+      <h2>1. 앱에 입력하는 정보</h2>
+      <p>급여, 통화, 근무일, 근무 시간, 급여일, 펫 이름, 외관 설정은 사용자 본인의 기기에만 저장됩니다(Android에서는 앱의 로컬 저장소, Windows에서는 사용자 데이터 폴더). 저희는 이 정보를 업로드하거나 수집하지 않고, 이 정보에 접근할 수도 없으며, 이 정보를 저장하는 서버도 없습니다. 앱을 제거하면(또는 데스크톱 앱의 데이터 폴더를 삭제하면) 이 정보도 삭제됩니다.</p>
+
+      <h2>2. 환율(선택 사항)</h2>
+      <p>설정에서 “표시 통화”를 다른 통화로 선택하고 “환율”을 “자동”으로 설정한 경우에만, 앱이 공개 환율 데이터를 가져오기 위해 ExchangeRate-API(open.er-api.com)에 연결합니다. 이 요청에는 통화 코드(예: NZD)만 포함되며, 급여나 그 밖의 어떤 설정도 포함되지 않습니다. 일반 웹사이트와 마찬가지로 해당 서버는 사용자의 IP 주소를 볼 수 있습니다. 자세한 내용은 <a href="https://www.exchangerate-api.com/terms" target="_blank" rel="noopener">ExchangeRate-API 이용약관 및 개인정보 관련 안내</a>를 참고하시기 바랍니다.</p>
+
+      <h2>3. 광고</h2>
+      <p><strong>Android 앱</strong>은 Google AdMob을 사용해 배너 광고와 보상형 광고를 표시합니다(보상형 광고를 시청하면 캐릭터, 색상 및 기타 꾸미기 옵션이 잠금 해제됩니다). Google은 제3자로서 자사 소프트웨어 개발 키트(SDK)를 통해 다음 데이터를 수집하고 처리할 수 있습니다.</p>
+      <ul>
+        <li>광고 ID를 포함한 기기 식별자</li>
+        <li>기기 및 앱 정보(모델, OS 버전, 언어, 앱 버전 등)</li>
+        <li>IP 주소 및 이를 바탕으로 추정한 대략적인 위치</li>
+        <li>광고 상호작용 및 진단 데이터(광고 노출, 클릭, 로딩 성능 및 비정상 종료 정보)</li>
+      </ul>
+      <p>이 데이터는 광고 표시, 광고 성과 측정, 사기 및 악용 방지에 사용되며, 사용자가 동의한 경우에는 맞춤형 광고에도 사용됩니다. Google은 자체 개인정보처리방침에 따라 이 데이터를 처리하며, 저희는 사용자 개인을 식별할 수 있는 정보를 받지 않습니다. 자세한 내용은 <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google 서비스를 사용하는 사이트 또는 앱의 정보를 Google이 사용하는 방법</a> 및 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a>을 참고하시기 바랍니다.</p>
+      <p>Android 앱에서는 다음과 같이 광고 데이터를 관리할 수 있습니다.</p>
+      <ul>
+        <li>유럽 경제 지역(EEA), 영국, 스위스에서는 앱을 처음 열 때 Google의 동의 관리 도구를 통해 동의를 요청합니다. 선택 내용은 언제든지 설정 → 광고 개인정보 옵션에서 변경할 수 있습니다.</li>
+        <li>Android 설정 → 개인정보 보호 → 광고에서 광고 ID를 삭제하거나 재설정할 수 있으며, 맞춤 광고를 받지 않도록 선택할 수도 있습니다.</li>
+      </ul>
+      <p><strong>Windows 데스크톱 앱</strong>의 무료 버전은 Liftoff Monetize(구 Vungle)를 사용해 보상형 동영상 광고와 전면 광고를 표시합니다. 보상형 동영상을 시청하면 캐릭터, 색상 및 기타 꾸미기 옵션과 일부 기능이 잠금 해제됩니다. 전면 광고는 표시 빈도에 제한을 두고 가끔씩만 나타납니다. Liftoff는 제3자로서 자사 SDK를 통해 다음 데이터를 수집하고 처리할 수 있습니다.</p>
+      <ul>
+        <li>기기 식별자: Windows 광고 ID(사용 설정한 경우) 및 Windows가 이 앱 전용으로 생성하는 하드웨어 식별자(ASHWID, 같은 광고가 표시되는 빈도를 제한하고 사기를 방지하는 데 사용)</li>
+        <li>기기 정보: 컴퓨터 제조사 및 모델, OS 버전, 언어 및 지역, 시간대, 화면 크기, 배터리 잔량 및 절전 모드 상태, 남은 저장 공간, 네트워크 연결 유형</li>
+        <li>IP 주소 및 이를 바탕으로 추정한 대략적인 위치</li>
+        <li>광고 상호작용 및 진단 데이터(광고 노출, 클릭, 재생 및 로딩 성능)</li>
+      </ul>
+      <p>이 데이터는 광고 표시, 광고 성과 측정, 사기 및 악용 방지에 사용되며, 사용자가 동의한 경우에는 맞춤형 광고에도 사용됩니다. Liftoff는 자체 개인정보처리방침에 따라 이 데이터를 처리하며, 저희는 사용자 개인을 식별할 수 있는 정보를 받지 않습니다. 자세한 내용은 <a href="https://liftoff.io/privacy-policy/" target="_blank" rel="noopener">Liftoff 개인정보처리방침</a>을 참고하시기 바랍니다.</p>
+      <p>데스크톱 앱에서는 다음과 같이 광고 데이터를 관리할 수 있습니다.</p>
+      <ul>
+        <li>유럽 경제 지역(EEA), 영국, 스위스에서는 사용자가 동의한 경우에만 맞춤형 광고가 표시됩니다.</li>
+        <li>Windows 설정 → 개인 정보 및 보안 → 일반에서 “앱에서 광고 ID를 사용하여 개인 설정된 광고를 표시하도록 허용”을 끄십시오.</li>
+        <li><a href="https://liftoff.ai/opt-out/" target="_blank" rel="noopener">Liftoff 수신 거부 페이지</a>에서 관심 기반 광고를 거부할 수 있습니다.</li>
+        <li>Paytick Pro를 사용하면 데스크톱 앱은 광고 SDK를 아예 불러오지 않으며, Liftoff에 어떤 데이터도 보내지 않습니다.</li>
+      </ul>
+      <p>Liftoff는 Windows 데스크톱 앱에서만 사용되며, Android 앱은 Liftoff를 사용하지 않습니다.</p>
+
+      <h2>4. Paytick Pro 구매 및 활성화(데스크톱 앱)</h2>
+      <p>Windows 데스크톱 앱은 무료로 사용할 수 있으며, 원하는 경우 “Paytick Pro”를 한 번 구매해 모든 펫, 그림체, 기능을 잠금 해제하고 광고를 없앨 수 있습니다. 구매는 판매 대행자(Merchant of Record)인 Dodo Payments가 처리합니다. 결제 페이지에 입력하는 이름, 이메일, 결제 정보는 Dodo Payments가 수집하고 처리합니다. 저희는 주문 정보(구매한 제품, 고객 지원을 위한 이메일 등)만 받으며, 카드 정보는 절대 볼 수 없습니다. 자세한 내용은 <a href="https://dodopayments.com/legal/privacy-policy" target="_blank" rel="noopener">Dodo Payments 개인정보처리방침</a>을 참고하시기 바랍니다.</p>
+      <p>앱에서 Pro를 활성화하면, 키가 유효한지 확인하고 어느 컴퓨터에서 활성화되었는지 기록하기 위해 앱이 라이선스 키와 이 컴퓨터의 이름을 Dodo Payments로 전송합니다(언제든지 “이 컴퓨터에서 비활성화”로 해제하여 다른 컴퓨터로 옮길 수 있습니다). 앱은 며칠마다 온라인으로 키가 여전히 유효한지(예: 환불되지 않았는지) 확인합니다. 라이선스 키와 활성화 기록은 사용자의 컴퓨터에만 저장됩니다.</p>
+
+      <h2>5. 권한</h2>
+      <ul>
+        <li><strong>네트워크 액세스</strong>: 광고 표시, 환율 가져오기(사용 설정한 경우), 데스크톱에서 Paytick Pro 활성화에 사용됩니다.</li>
+        <li><strong>다른 앱 위에 표시(플로팅 창)</strong>: “앱 밖에서도 플로팅 펫 표시”를 켠 후에만 홈 화면에 펫과 수입을 표시하기 위해 사용됩니다. 앱은 다른 앱의 내용을 읽지 않습니다.</li>
+        <li>Windows에서 “시작 시 자동 실행”은 사용자가 켠 후에만 앱을 시작 프로그램에 추가합니다.</li>
+      </ul>
+
+      <h2>6. 저희가 하지 않는 일</h2>
+      <p>저희는 사용자의 데이터를 판매하지 않고, 급여나 설정을 누구와도 공유하지 않으며, 앱을 이용해 다른 앱이나 웹사이트에서의 활동을 추적하지 않습니다. 위에서 설명한 Google AdMob, Liftoff Monetize, 환율 서비스, Dodo Payments를 제외하면 앱은 제3자에게 어떤 데이터도 전송하지 않습니다.</p>
+
+      <h2>7. 아동</h2>
+      <p>앱은 일하는 성인을 위한 앱입니다. 13세 미만 아동을 대상으로 하지 않으며, 저희는 아동의 개인정보를 고의로 수집하지 않습니다.</p>
+
+      <h2>8. 데이터 보안 및 보관</h2>
+      <p>설정은 사용자가 변경하거나, 앱 데이터를 지우거나, 앱을 제거할 때까지 기기에 남아 있습니다. 저희는 사용자 데이터를 보관하는 서버를 운영하지 않습니다.</p>
+
+      <h2>9. 방침 변경</h2>
+      <p>이 방침이 변경되면 이 페이지와 위의 시행일을 업데이트합니다. 중요한 변경 사항은 앱 릴리스 노트를 통해 알려 드립니다.</p>
+
+      <h2>10. 문의</h2>
+      <p>이 개인정보 처리방침에 관해 궁금한 점이 있으시면 <a href="mailto:happymoneyeverysecond@gmail.com">happymoneyeverysecond@gmail.com</a>으로 이메일을 보내 주시기 바랍니다.</p>
+    </article>
+
+    <!-- ───────────── Español ───────────── -->
+    <article lang="es" data-lang="es" hidden>
+      <h1>Política de privacidad</h1>
+      <p class="date">Fecha de entrada en vigor: 24 de octubre de 2026</p>
+      <p class="note">Esta es una traducción para tu comodidad. Si difiere de la versión en inglés, prevalece la versión en inglés. <a href="?lang=en">Leer la versión en inglés</a></p>
+
+      <p>Esta Política de privacidad se aplica a Paytick (nombre en chino: 秒薪), incluidas la app para Android (paquete com.paytick) y la app de escritorio para Windows (en conjunto, “la App”). La App muestra en tiempo real cuánto has ganado según tu sueldo y tu horario. Recopilamos lo mínimo posible: la App no tiene cuentas y la información que introduces nunca sale de tu dispositivo.</p>
+
+      <h2>1. Información que introduces en la App</h2>
+      <p>Tu sueldo, tu moneda, tus días laborables, tu horario de trabajo, tu día de pago, los apodos de tus mascotas y tus preferencias de apariencia se guardan solo en tu propio dispositivo (en el almacenamiento local de la app en Android y en tu carpeta de datos de usuario en Windows). No subimos, no recopilamos ni tenemos acceso a esta información, y no tenemos servidores que la almacenen. Al desinstalar la App (o eliminar la carpeta de datos de la app de escritorio), esta información se elimina.</p>
+
+      <h2>2. Tipos de cambio (opcional)</h2>
+      <p>Solo si eliges otra moneda en “Mostrar cantidades en” y configuras “Tipo de cambio” en “Automático” en Ajustes, la App se conecta a ExchangeRate-API (open.er-api.com) para obtener datos públicos de tipos de cambio. La solicitud contiene únicamente un código de moneda (por ejemplo, NZD), nunca tu sueldo ni ningún otro ajuste. Como ocurre con cualquier sitio web, su servidor puede ver tu dirección IP. Consulta <a href="https://www.exchangerate-api.com/terms" target="_blank" rel="noopener">los términos y la información de privacidad de ExchangeRate-API</a>.</p>
+
+      <h2>3. Publicidad</h2>
+      <p>La <strong>app para Android</strong> usa Google AdMob para mostrar anuncios de banner y anuncios con recompensa (ver un anuncio con recompensa desbloquea personajes, colores y otras opciones estéticas). Como tercero, Google puede recopilar y tratar los siguientes datos a través de su kit de desarrollo de software (SDK):</p>
+      <ul>
+        <li>identificadores del dispositivo, incluido el ID de publicidad;</li>
+        <li>información del dispositivo y de la app (modelo, versión del sistema operativo, idioma, versión de la app, etc.);</li>
+        <li>la dirección IP y la ubicación aproximada que se deriva de ella;</li>
+        <li>datos de interacción con los anuncios y de diagnóstico (impresiones de anuncios, clics, rendimiento de carga e información sobre fallos).</li>
+      </ul>
+      <p>Estos datos se usan para mostrar anuncios, medir su rendimiento y prevenir el fraude y el abuso y, cuando hayas dado tu consentimiento, para personalizar los anuncios. Google los trata conforme a su propia política de privacidad; nosotros no recibimos información que te identifique personalmente. Consulta <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Cómo utiliza Google la información de sitios web o aplicaciones que utilizan sus servicios</a> y la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de privacidad de Google</a>.</p>
+      <p>Puedes controlar los datos de anuncios en la app para Android de la siguiente manera:</p>
+      <ul>
+        <li>En el Espacio Económico Europeo, el Reino Unido y Suiza, la App te pide tu consentimiento mediante la herramienta de gestión del consentimiento de Google la primera vez que la abres. Puedes cambiar tu elección en cualquier momento en Ajustes → Opciones de privacidad de anuncios.</li>
+        <li>En los ajustes de Android → Privacidad → Anuncios, puedes eliminar o restablecer tu ID de publicidad, o desactivar los anuncios personalizados.</li>
+      </ul>
+      <p>La versión gratuita de la <strong>app de escritorio para Windows</strong> usa Liftoff Monetize (antes Vungle) para mostrar anuncios de video con recompensa y anuncios intersticiales. Ver un video con recompensa desbloquea personajes, colores y otras opciones estéticas, así como algunas funciones; los anuncios intersticiales aparecen solo de vez en cuando, con un límite en la frecuencia con la que se muestran. Como tercero, Liftoff puede recopilar y tratar los siguientes datos a través de su SDK:</p>
+      <ul>
+        <li>identificadores del dispositivo: el ID de publicidad de Windows (si lo has activado) y un identificador de hardware que Windows genera exclusivamente para esta app (ASHWID, que se usa para limitar la frecuencia con la que se muestra el mismo anuncio y para prevenir el fraude);</li>
+        <li>información del dispositivo: marca y modelo del equipo, versión del sistema operativo, idioma y región, zona horaria, tamaño de la pantalla, nivel de batería y estado del ahorro de batería, espacio de almacenamiento libre y tipo de conexión de red;</li>
+        <li>la dirección IP y la ubicación aproximada que se deriva de ella;</li>
+        <li>datos de interacción con los anuncios y de diagnóstico (impresiones de anuncios, clics, rendimiento de reproducción y de carga).</li>
+      </ul>
+      <p>Estos datos se usan para mostrar anuncios, medir su rendimiento y prevenir el fraude y el abuso y, cuando hayas dado tu consentimiento, para personalizar los anuncios. Liftoff los trata conforme a su propia política de privacidad; nosotros no recibimos información que te identifique personalmente. Consulta la <a href="https://liftoff.io/privacy-policy/" target="_blank" rel="noopener">Política de privacidad de Liftoff</a>.</p>
+      <p>Puedes controlar los datos de anuncios en la app de escritorio de la siguiente manera:</p>
+      <ul>
+        <li>En el Espacio Económico Europeo, el Reino Unido y Suiza, los anuncios personalizados solo se muestran con tu consentimiento.</li>
+        <li>En Configuración de Windows → Privacidad y seguridad → General, desactiva “Permitir que las aplicaciones me muestren anuncios personalizados usando mi id. de publicidad”.</li>
+        <li>Desactiva la publicidad basada en intereses en la <a href="https://liftoff.ai/opt-out/" target="_blank" rel="noopener">página de exclusión voluntaria de Liftoff</a>.</li>
+        <li>Con Paytick Pro, la app de escritorio no carga en absoluto el SDK de anuncios y no envía ningún dato a Liftoff.</li>
+      </ul>
+      <p>Liftoff se usa solo en la app de escritorio para Windows; la app para Android no usa Liftoff.</p>
+
+      <h2>4. Compras y activación de Paytick Pro (app de escritorio)</h2>
+      <p>La app de escritorio para Windows es de uso gratuito y, si lo deseas, puedes comprar “Paytick Pro” una sola vez para desbloquear todas las mascotas, estilos y funciones, y quitar los anuncios. Las compras las gestiona Dodo Payments como comerciante registrado (merchant of record): el nombre, el correo electrónico y los datos de pago que introduces en su página de pago los recopila y trata Dodo Payments. Nosotros solo recibimos información del pedido (como el producto comprado y tu correo electrónico, para la atención al cliente) y nunca vemos los datos de tu tarjeta. Consulta la <a href="https://dodopayments.com/legal/privacy-policy" target="_blank" rel="noopener">Política de privacidad de Dodo Payments</a>.</p>
+      <p>Cuando activas Pro en la App, esta envía tu clave de licencia y el nombre de este equipo a Dodo Payments para confirmar que la clave es válida y registrar en qué equipo está activada (puedes liberarla en cualquier momento con “Desactivar en este equipo” para pasarla a otro equipo). Cada pocos días, la App comprueba en línea que la clave sigue siendo válida (por ejemplo, que no se ha reembolsado). Tu clave de licencia y el registro de activación se guardan solo en tu equipo.</p>
+
+      <h2>5. Permisos</h2>
+      <ul>
+        <li><strong>Acceso a la red</strong>: para mostrar anuncios, para obtener tipos de cambio cuando esta opción está activada y para activar Paytick Pro en el escritorio.</li>
+        <li><strong>Mostrar sobre otras apps (ventana flotante)</strong>: solo se usa después de que actives “Mascota flotante fuera de la app”, para mostrar tu mascota y tus ingresos en la pantalla de inicio. La App no lee el contenido de otras apps.</li>
+        <li>En Windows, “Iniciar automáticamente” solo añade la App a tus elementos de inicio después de que lo actives.</li>
+      </ul>
+
+      <h2>6. Lo que no hacemos</h2>
+      <p>No vendemos tus datos, no compartimos tu sueldo ni tus ajustes con nadie y no usamos la App para rastrear tu actividad en otras apps o sitios web. Aparte de Google AdMob, Liftoff Monetize, el servicio de tipos de cambio y Dodo Payments descritos arriba, la App no envía datos a terceros.</p>
+
+      <h2>7. Niños</h2>
+      <p>La App está pensada para adultos que trabajan. No está dirigida a niños menores de 13 años y no recopilamos a sabiendas información personal de niños.</p>
+
+      <h2>8. Seguridad y conservación de los datos</h2>
+      <p>Tus ajustes permanecen en tu dispositivo hasta que los cambies, borres los datos de la app o desinstales la App. No operamos ningún servidor que guarde datos de usuarios.</p>
+
+      <h2>9. Cambios en esta política</h2>
+      <p>Si esta política cambia, actualizaremos esta página y la fecha de entrada en vigor indicada arriba. Los cambios importantes se mencionarán en las notas de la versión de la App.</p>
+
+      <h2>10. Contacto</h2>
+      <p>Si tienes alguna pregunta sobre esta Política de privacidad, envía un correo electrónico a <a href="mailto:happymoneyeverysecond@gmail.com">happymoneyeverysecond@gmail.com</a>.</p>
+    </article>
+
+    <!-- ───────────── Deutsch ───────────── -->
+    <article lang="de" data-lang="de" hidden>
+      <h1>Datenschutzerklärung</h1>
+      <p class="date">Gültig ab: 24. Oktober 2026</p>
+      <p class="note">Diese Übersetzung dient nur deiner Information. Weicht sie von der englischen Fassung ab, gilt die englische Fassung. <a href="?lang=en">Englische Fassung lesen</a></p>
+
+      <p>Diese Datenschutzerklärung gilt für Paytick (chinesischer Name 秒薪), einschließlich der Android-App (Paket com.paytick) und der Windows-Desktop-App (zusammen „die App“). Die App zeigt in Echtzeit an, wie viel du auf Grundlage deines Lohns und deiner Arbeitszeiten verdient hast. Wir erheben so wenig wie möglich: Die App hat keine Konten, und die Informationen, die du eingibst, verlassen niemals dein Gerät.</p>
+
+      <h2>1. Informationen, die du in der App eingibst</h2>
+      <p>Dein Lohn, deine Währung, Arbeitstage, Arbeitszeiten, dein Zahltag, die Spitznamen deiner Haustiere und deine Darstellungseinstellungen werden ausschließlich auf deinem eigenen Gerät gespeichert (unter Android im lokalen Speicher der App, unter Windows in deinem Benutzerdatenordner). Wir laden diese Informationen nicht hoch, erheben sie nicht und haben keinen Zugriff darauf, und wir betreiben keine Server, auf denen sie gespeichert werden. Wenn du die App deinstallierst (oder den Datenordner der Desktop-App löschst), werden sie gelöscht.</p>
+
+      <h2>2. Wechselkurse (optional)</h2>
+      <p>Nur wenn du in den Einstellungen unter „Beträge anzeigen in“ eine andere Währung auswählst und „Wechselkurs“ auf „Auto“ stellst, verbindet sich die App mit ExchangeRate-API (open.er-api.com), um öffentliche Wechselkursdaten abzurufen. Die Anfrage enthält nur einen Währungscode (zum Beispiel NZD), niemals deinen Lohn oder eine andere Einstellung. Wie bei jeder Website kann deren Server deine IP-Adresse sehen. Siehe die <a href="https://www.exchangerate-api.com/terms" target="_blank" rel="noopener">Nutzungsbedingungen und Datenschutzinformationen von ExchangeRate-API</a>.</p>
+
+      <h2>3. Werbung</h2>
+      <p>Die <strong>Android-App</strong> verwendet Google AdMob, um Bannerwerbung und Werbung mit Belohnung anzuzeigen (durch das Ansehen einer Werbung mit Belohnung werden Figuren, Farben und andere kosmetische Optionen freigeschaltet). Als Drittanbieter kann Google über sein Software Development Kit (SDK) die folgenden Daten erheben und verarbeiten:</p>
+      <ul>
+        <li>Gerätekennungen, einschließlich der Werbe-ID;</li>
+        <li>Geräte- und App-Informationen (Modell, Betriebssystemversion, Sprache, App-Version usw.);</li>
+        <li>IP-Adresse und der daraus abgeleitete ungefähre Standort;</li>
+        <li>Daten zur Interaktion mit Werbung und Diagnosedaten (Werbeeinblendungen, Klicks, Ladeleistung und Absturzinformationen).</li>
+      </ul>
+      <p>Diese Daten werden verwendet, um Werbung anzuzeigen, die Leistung von Werbung zu messen und Betrug und Missbrauch zu verhindern sowie – sofern du eingewilligt hast – um Werbung zu personalisieren. Google verarbeitet sie gemäß seiner eigenen Datenschutzerklärung; wir erhalten keine Informationen, die dich persönlich identifizieren. Siehe <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Wie Google Daten von Websites oder Apps verwendet, die Google-Dienste nutzen</a> und die <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Datenschutzerklärung von Google</a>.</p>
+      <p>Du kannst Werbedaten in der Android-App wie folgt steuern:</p>
+      <ul>
+        <li>Im Europäischen Wirtschaftsraum, im Vereinigten Königreich und in der Schweiz bittet dich die App beim ersten Öffnen über das Einwilligungsverwaltungstool von Google um deine Einwilligung. Du kannst deine Auswahl jederzeit unter Einstellungen → Datenschutzoptionen für Werbung ändern.</li>
+        <li>Unter Android-Einstellungen → Datenschutz → Anzeigen kannst du deine Werbe-ID löschen oder zurücksetzen oder personalisierte Werbung deaktivieren.</li>
+      </ul>
+      <p>Die kostenlose Version der <strong>Windows-Desktop-App</strong> verwendet Liftoff Monetize (ehemals Vungle), um Videowerbung mit Belohnung und Interstitial-Werbung (Vollbildwerbung) anzuzeigen. Durch das Ansehen eines Videos mit Belohnung werden Figuren, Farben und andere kosmetische Optionen sowie einige Funktionen freigeschaltet; Interstitial-Werbung erscheint nur gelegentlich, wobei begrenzt ist, wie oft sie angezeigt wird. Als Drittanbieter kann Liftoff über sein SDK die folgenden Daten erheben und verarbeiten:</p>
+      <ul>
+        <li>Gerätekennungen: die Windows-Werbe-ID (sofern du sie aktiviert hast) und eine Hardwarekennung, die Windows nur für diese App erzeugt (ASHWID; sie dient dazu, zu begrenzen, wie oft dieselbe Werbung angezeigt wird, und Betrug zu verhindern);</li>
+        <li>Geräteinformationen: Hersteller und Modell des Computers, Betriebssystemversion, Sprache und Region, Zeitzone, Bildschirmgröße, Akkustand und Status des Energiesparmodus, freier Speicherplatz und Art der Netzwerkverbindung;</li>
+        <li>IP-Adresse und der daraus abgeleitete ungefähre Standort;</li>
+        <li>Daten zur Interaktion mit Werbung und Diagnosedaten (Werbeeinblendungen, Klicks, Wiedergabe- und Ladeleistung).</li>
+      </ul>
+      <p>Diese Daten werden verwendet, um Werbung anzuzeigen, die Leistung von Werbung zu messen und Betrug und Missbrauch zu verhindern sowie – sofern du eingewilligt hast – um Werbung zu personalisieren. Liftoff verarbeitet sie gemäß seiner eigenen Datenschutzerklärung; wir erhalten keine Informationen, die dich persönlich identifizieren. Siehe die <a href="https://liftoff.io/privacy-policy/" target="_blank" rel="noopener">Datenschutzerklärung von Liftoff</a>.</p>
+      <p>Du kannst Werbedaten in der Desktop-App wie folgt steuern:</p>
+      <ul>
+        <li>Im Europäischen Wirtschaftsraum, im Vereinigten Königreich und in der Schweiz wird personalisierte Werbung nur mit deiner Einwilligung angezeigt.</li>
+        <li>Deaktiviere unter Windows-Einstellungen → Datenschutz und Sicherheit → Allgemein die Option „Apps das Anzeigen personalisierter Werbung mithilfe meiner Werbe-ID erlauben“.</li>
+        <li>Widersprich interessenbasierter Werbung auf der <a href="https://liftoff.ai/opt-out/" target="_blank" rel="noopener">Opt-out-Seite von Liftoff</a>.</li>
+        <li>Mit Paytick Pro lädt die Desktop-App das Werbe-SDK überhaupt nicht und sendet keine Daten an Liftoff.</li>
+      </ul>
+      <p>Liftoff wird nur in der Windows-Desktop-App verwendet; die Android-App verwendet Liftoff nicht.</p>
+
+      <h2>4. Käufe und Aktivierung von Paytick Pro (Desktop-App)</h2>
+      <p>Die Windows-Desktop-App ist kostenlos nutzbar, und du kannst optional einmalig „Paytick Pro“ kaufen, um alle Haustiere, Stile und Funktionen freizuschalten und die Werbung zu entfernen. Käufe werden von Dodo Payments als Verkäufer (Merchant of Record) abgewickelt: Name, E-Mail-Adresse und Zahlungsdaten, die du auf der Bezahlseite von Dodo Payments eingibst, werden von Dodo Payments erhoben und verarbeitet. Wir erhalten nur Bestellinformationen (zum Beispiel das gekaufte Produkt und deine E-Mail-Adresse, für den Kundensupport) und sehen niemals deine Kartendaten. Siehe die <a href="https://dodopayments.com/legal/privacy-policy" target="_blank" rel="noopener">Datenschutzerklärung von Dodo Payments</a>.</p>
+      <p>Wenn du Pro in der App aktivierst, sendet sie deinen Lizenzschlüssel und den Namen dieses Computers an Dodo Payments, um zu bestätigen, dass der Schlüssel gültig ist, und um festzuhalten, auf welchem Computer er aktiviert ist (du kannst ihn jederzeit mit „Auf diesem Computer deaktivieren“ freigeben, um ihn auf einen anderen Computer zu übertragen). Alle paar Tage prüft die App online, ob der Schlüssel noch gültig ist (zum Beispiel, dass der Kauf nicht rückerstattet wurde). Dein Lizenzschlüssel und der Aktivierungsdatensatz werden nur auf deinem Computer gespeichert.</p>
+
+      <h2>5. Berechtigungen</h2>
+      <ul>
+        <li><strong>Netzwerkzugriff</strong>: um Werbung anzuzeigen, um Wechselkurse abzurufen (wenn aktiviert) und um Paytick Pro auf dem Desktop zu aktivieren.</li>
+        <li><strong>Über anderen Apps einblenden (schwebendes Fenster)</strong>: wird nur verwendet, nachdem du „Schwebendes Haustier außerhalb der App“ aktiviert hast, um dein Haustier und deinen Verdienst auf dem Startbildschirm anzuzeigen. Die App liest keine Inhalte anderer Apps.</li>
+        <li>Unter Windows fügt „Beim Systemstart öffnen“ die App erst dann zu deinen Autostart-Elementen hinzu, wenn du die Option aktivierst.</li>
+      </ul>
+
+      <h2>6. Was wir nicht tun</h2>
+      <p>Wir verkaufen deine Daten nicht, geben deinen Lohn oder deine Einstellungen an niemanden weiter und nutzen die App nicht, um deine Aktivitäten über andere Apps oder Websites hinweg zu verfolgen. Abgesehen von den oben beschriebenen Diensten Google AdMob, Liftoff Monetize, dem Wechselkursdienst und Dodo Payments sendet die App keine Daten an Dritte.</p>
+
+      <h2>7. Kinder</h2>
+      <p>Die App ist für berufstätige Erwachsene bestimmt. Sie richtet sich nicht an Kinder unter 13 Jahren, und wir erheben wissentlich keine personenbezogenen Daten von Kindern.</p>
+
+      <h2>8. Datensicherheit und Speicherdauer</h2>
+      <p>Deine Einstellungen bleiben auf deinem Gerät, bis du sie änderst, die App-Daten löschst oder die App deinstallierst. Wir betreiben keine Server, auf denen Nutzerdaten gespeichert werden.</p>
+
+      <h2>9. Änderungen dieser Erklärung</h2>
+      <p>Wenn sich diese Erklärung ändert, aktualisieren wir diese Seite und das oben angegebene Gültigkeitsdatum. Wesentliche Änderungen werden in den Versionshinweisen der App erwähnt.</p>
+
+      <h2>10. Kontakt</h2>
+      <p>Wenn du Fragen zu dieser Datenschutzerklärung hast, schreib bitte eine E-Mail an <a href="mailto:happymoneyeverysecond@gmail.com">happymoneyeverysecond@gmail.com</a>.</p>
+    </article>
+
+    <!-- ───────────── Français ───────────── -->
+    <article lang="fr" data-lang="fr" hidden>
+      <h1>Politique de confidentialité</h1>
+      <p class="date">Date d’entrée en vigueur : 24 octobre 2026</p>
+      <p class="note">Cette traduction est fournie pour ta commodité. En cas de divergence avec la version anglaise, c’est la version anglaise qui prévaut. <a href="?lang=en">Lire la version anglaise</a></p>
+
+      <p>La présente Politique de confidentialité s’applique à Paytick (nom chinois 秒薪), y compris l’application Android (paquet com.paytick) et l’application de bureau Windows (ensemble, « l’Application »). L’Application affiche en temps réel combien tu as gagné en fonction de ton salaire et de tes horaires. Nous collectons le moins de données possible : l’Application n’a pas de comptes, et les informations que tu saisis ne quittent jamais ton appareil.</p>
+
+      <h2>1. Informations que tu saisis dans l’Application</h2>
+      <p>Ton salaire, ta devise, tes jours travaillés, tes horaires de travail, ton jour de paie, les surnoms de tes mascottes et tes préférences d’apparence sont stockés uniquement sur ton propre appareil (dans le stockage local de l’application sur Android, et dans ton dossier de données utilisateur sur Windows). Nous ne téléversons pas ces informations, nous ne les collectons pas et nous n’y avons pas accès, et nous n’avons aucun serveur qui les stocke. Désinstaller l’Application (ou supprimer le dossier de données de l’application de bureau) les supprime.</p>
+
+      <h2>2. Taux de change (facultatif)</h2>
+      <p>Uniquement si tu choisis une autre devise dans « Afficher les montants en » et que tu règles « Taux de change » sur « Auto » dans les Réglages, l’Application se connecte à ExchangeRate-API (open.er-api.com) pour récupérer des données publiques de taux de change. La requête contient uniquement un code de devise (par exemple NZD), jamais ton salaire ni aucun autre réglage. Comme pour n’importe quel site web, leur serveur peut voir ton adresse IP. Consulte <a href="https://www.exchangerate-api.com/terms" target="_blank" rel="noopener">les conditions et les informations de confidentialité d’ExchangeRate-API</a>.</p>
+
+      <h2>3. Publicité</h2>
+      <p>L’<strong>application Android</strong> utilise Google AdMob pour afficher des bannières publicitaires et des publicités avec récompense (regarder une publicité avec récompense débloque des personnages, des couleurs et d’autres options esthétiques). En tant que tiers, Google peut collecter et traiter les données suivantes par l’intermédiaire de son kit de développement logiciel (SDK) :</p>
+      <ul>
+        <li>les identifiants de l’appareil, y compris l’identifiant publicitaire ;</li>
+        <li>les informations sur l’appareil et l’application (modèle, version du système d’exploitation, langue, version de l’application, etc.) ;</li>
+        <li>l’adresse IP et la localisation approximative qui en est déduite ;</li>
+        <li>les données d’interaction avec les publicités et de diagnostic (impressions et clics publicitaires, performances de chargement et informations sur les plantages).</li>
+      </ul>
+      <p>Ces données servent à afficher des publicités, à mesurer leurs performances et à prévenir la fraude et les abus, ainsi que, si tu y as consenti, à personnaliser les publicités. Google les traite conformément à sa propre politique de confidentialité ; nous ne recevons aucune information permettant de t’identifier personnellement. Consulte <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Comment Google utilise les informations des sites ou applications qui utilisent ses services</a> et les <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Règles de confidentialité de Google</a>.</p>
+      <p>Tu peux contrôler les données publicitaires dans l’application Android comme suit :</p>
+      <ul>
+        <li>Dans l’Espace économique européen, au Royaume-Uni et en Suisse, l’Application te demande ton consentement via l’outil de gestion du consentement de Google lors de sa première ouverture. Tu peux modifier ton choix à tout moment dans Réglages → Confidentialité des pubs.</li>
+        <li>Dans Paramètres Android → Confidentialité → Annonces, tu peux supprimer ou réinitialiser ton identifiant publicitaire, ou désactiver les annonces personnalisées.</li>
+      </ul>
+      <p>La version gratuite de l’<strong>application de bureau Windows</strong> utilise Liftoff Monetize (anciennement Vungle) pour afficher des publicités vidéo avec récompense et des publicités interstitielles. Regarder une vidéo avec récompense débloque des personnages, des couleurs et d’autres options esthétiques, ainsi que certaines fonctionnalités ; les publicités interstitielles n’apparaissent qu’occasionnellement, avec une limite de fréquence d’affichage. En tant que tiers, Liftoff peut collecter et traiter les données suivantes par l’intermédiaire de son SDK :</p>
+      <ul>
+        <li>les identifiants de l’appareil : l’identifiant publicitaire Windows (si tu l’as activé) et un identifiant matériel que Windows génère pour cette application uniquement (ASHWID, utilisé pour limiter la fréquence d’affichage d’une même publicité et pour prévenir la fraude) ;</li>
+        <li>les informations sur l’appareil : marque et modèle de l’ordinateur, version du système d’exploitation, langue et région, fuseau horaire, taille de l’écran, niveau de batterie et état de l’économiseur de batterie, espace de stockage libre et type de connexion réseau ;</li>
+        <li>l’adresse IP et la localisation approximative qui en est déduite ;</li>
+        <li>les données d’interaction avec les publicités et de diagnostic (impressions et clics publicitaires, performances de lecture et de chargement).</li>
+      </ul>
+      <p>Ces données servent à afficher des publicités, à mesurer leurs performances et à prévenir la fraude et les abus, ainsi que, si tu y as consenti, à personnaliser les publicités. Liftoff les traite conformément à sa propre politique de confidentialité ; nous ne recevons aucune information permettant de t’identifier personnellement. Consulte la <a href="https://liftoff.io/privacy-policy/" target="_blank" rel="noopener">Politique de confidentialité de Liftoff</a>.</p>
+      <p>Tu peux contrôler les données publicitaires dans l’application de bureau comme suit :</p>
+      <ul>
+        <li>Dans l’Espace économique européen, au Royaume-Uni et en Suisse, les publicités personnalisées ne sont affichées qu’avec ton consentement.</li>
+        <li>Dans Paramètres Windows → Confidentialité et sécurité → Général, désactive « Autoriser les applications à me montrer des publicités personnalisées à l’aide de mon identifiant de publicité ».</li>
+        <li>Désactive la publicité ciblée par centres d’intérêt sur la <a href="https://liftoff.ai/opt-out/" target="_blank" rel="noopener">page de désinscription de Liftoff</a>.</li>
+        <li>Avec Paytick Pro, l’application de bureau ne charge pas du tout le SDK publicitaire et n’envoie aucune donnée à Liftoff.</li>
+      </ul>
+      <p>Liftoff est utilisé uniquement dans l’application de bureau Windows ; l’application Android n’utilise pas Liftoff.</p>
+
+      <h2>4. Achats et activation de Paytick Pro (application de bureau)</h2>
+      <p>L’application de bureau Windows est gratuite, et tu peux, si tu le souhaites, acheter « Paytick Pro » une seule fois pour débloquer toutes les mascottes, tous les styles et toutes les fonctionnalités, et supprimer les publicités. Les achats sont gérés par Dodo Payments en tant que marchand officiel (merchant of record) : le nom, l’adresse e-mail et les informations de paiement que tu saisis sur sa page de paiement sont collectés et traités par Dodo Payments. Nous recevons uniquement les informations de commande (comme le produit acheté et ton adresse e-mail, pour le service client) et nous ne voyons jamais les informations de ta carte. Consulte la <a href="https://dodopayments.com/legal/privacy-policy" target="_blank" rel="noopener">Politique de confidentialité de Dodo Payments</a>.</p>
+      <p>Lorsque tu actives Pro dans l’Application, celle-ci envoie ta clé de licence et le nom de cet ordinateur à Dodo Payments pour confirmer que la clé est valide et pour enregistrer l’ordinateur sur lequel elle est activée (tu peux la libérer à tout moment avec « Désactiver sur cet ordinateur » pour la transférer sur un autre ordinateur). Tous les quelques jours, l’Application vérifie en ligne que la clé est toujours valide (par exemple, qu’elle n’a pas été remboursée). Ta clé de licence et ton enregistrement d’activation sont stockés uniquement sur ton ordinateur.</p>
+
+      <h2>5. Autorisations</h2>
+      <ul>
+        <li><strong>Accès au réseau</strong> : pour afficher des publicités, pour récupérer les taux de change lorsque cette option est activée, et pour activer Paytick Pro sur ordinateur.</li>
+        <li><strong>Affichage par-dessus d’autres applications (fenêtre flottante)</strong> : utilisé uniquement après que tu as activé « Mascotte flottante hors de l’app », pour afficher ta mascotte et tes gains sur l’écran d’accueil. L’Application ne lit pas le contenu des autres applications.</li>
+        <li>Sous Windows, « Lancer au démarrage » ajoute l’Application à tes éléments de démarrage uniquement après que tu as activé cette option.</li>
+      </ul>
+
+      <h2>6. Ce que nous ne faisons pas</h2>
+      <p>Nous ne vendons pas tes données, nous ne partageons ton salaire ni tes réglages avec personne, et nous n’utilisons pas l’Application pour suivre ton activité sur d’autres applications ou sites web. En dehors de Google AdMob, de Liftoff Monetize, du service de taux de change et de Dodo Payments décrits ci-dessus, l’Application n’envoie aucune donnée à des tiers.</p>
+
+      <h2>7. Enfants</h2>
+      <p>L’Application est destinée aux adultes qui travaillent. Elle ne s’adresse pas aux enfants de moins de 13 ans, et nous ne collectons pas sciemment d’informations personnelles auprès d’enfants.</p>
+
+      <h2>8. Sécurité et conservation des données</h2>
+      <p>Tes réglages restent sur ton appareil jusqu’à ce que tu les modifies, que tu effaces les données de l’application ou que tu désinstalles l’Application. Nous n’exploitons aucun serveur contenant des données d’utilisateurs.</p>
+
+      <h2>9. Modifications de cette politique</h2>
+      <p>Si cette politique change, nous mettrons à jour cette page et la date d’entrée en vigueur indiquée ci-dessus. Les changements importants seront mentionnés dans les notes de version de l’Application.</p>
+
+      <h2>10. Contact</h2>
+      <p>Pour toute question concernant cette Politique de confidentialité, envoie un e-mail à <a href="mailto:happymoneyeverysecond@gmail.com">happymoneyeverysecond@gmail.com</a>.</p>
+    </article>
+
+    <!-- ───────────── Português ───────────── -->
+    <article lang="pt" data-lang="pt" hidden>
+      <h1>Política de Privacidade</h1>
+      <p class="date">Data de vigência: 24 de outubro de 2026</p>
+      <p class="note">Esta é uma tradução oferecida para sua conveniência. Se houver divergência em relação à versão em inglês, prevalece a versão em inglês. <a href="?lang=en">Ler a versão em inglês</a></p>
+
+      <p>Esta Política de Privacidade se aplica ao Paytick (nome chinês 秒薪), incluindo o app para Android (pacote com.paytick) e o app de desktop para Windows (em conjunto, “o App”). O App mostra, em tempo real, quanto você ganhou com base no seu salário e no seu horário. Coletamos o mínimo possível: o App não tem contas, e as informações que você insere nunca saem do seu dispositivo.</p>
+
+      <h2>1. Informações que você insere no App</h2>
+      <p>Seu salário, moeda, dias de trabalho, horário de trabalho, dia de pagamento, apelidos dos pets e preferências de aparência são armazenados apenas no seu próprio dispositivo (no armazenamento local do app no Android e na sua pasta de dados de usuário no Windows). Não enviamos, não coletamos e não temos acesso a essas informações, e não temos servidores que as armazenem. Desinstalar o App (ou excluir a pasta de dados do app de desktop) apaga essas informações.</p>
+
+      <h2>2. Taxas de câmbio (opcional)</h2>
+      <p>Somente se você escolher outra moeda em “Mostrar valores em” e definir “Taxa de câmbio” como “Automática” nos Ajustes, o App se conecta à ExchangeRate-API (open.er-api.com) para obter dados públicos de taxas de câmbio. A solicitação contém apenas um código de moeda (por exemplo, NZD), nunca o seu salário nem qualquer outro ajuste. Como acontece com qualquer site, o servidor deles pode ver o seu endereço IP. Consulte os <a href="https://www.exchangerate-api.com/terms" target="_blank" rel="noopener">termos e informações de privacidade da ExchangeRate-API</a>.</p>
+
+      <h2>3. Publicidade</h2>
+      <p>O <strong>app para Android</strong> usa o Google AdMob para exibir anúncios em banner e anúncios premiados (assistir a um anúncio premiado desbloqueia personagens, cores e outras opções cosméticas). Como terceiro, o Google pode coletar e processar os seguintes dados por meio do seu kit de desenvolvimento de software (SDK):</p>
+      <ul>
+        <li>identificadores do dispositivo, incluindo o ID de publicidade;</li>
+        <li>informações do dispositivo e do app (modelo, versão do sistema operacional, idioma, versão do app etc.);</li>
+        <li>endereço IP e a localização aproximada obtida a partir dele;</li>
+        <li>dados de interação com anúncios e de diagnóstico (impressões de anúncios, cliques, desempenho de carregamento e informações sobre falhas).</li>
+      </ul>
+      <p>Esses dados são usados para exibir anúncios, medir o desempenho dos anúncios e prevenir fraudes e abusos e, quando você tiver dado seu consentimento, para personalizar anúncios. O Google processa esses dados de acordo com a própria política de privacidade dele; não recebemos informações que identifiquem você pessoalmente. Consulte <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Como o Google usa as informações de sites ou apps que usam os serviços dele</a> e a <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidade do Google</a>.</p>
+      <p>Você pode controlar os dados de anúncios no app para Android da seguinte forma:</p>
+      <ul>
+        <li>No Espaço Econômico Europeu, no Reino Unido e na Suíça, o App pede o seu consentimento por meio da ferramenta de gerenciamento de consentimento do Google quando você o abre pela primeira vez. Você pode alterar sua escolha a qualquer momento em Ajustes → Opções de privacidade de anúncios.</li>
+        <li>Em Configurações do Android → Privacidade → Anúncios, você pode excluir ou redefinir seu ID de publicidade, ou desativar os anúncios personalizados.</li>
+      </ul>
+      <p>A versão gratuita do <strong>app de desktop para Windows</strong> usa o Liftoff Monetize (antigo Vungle) para exibir anúncios premiados em vídeo e anúncios intersticiais. Assistir a um vídeo premiado desbloqueia personagens, cores e outras opções cosméticas, além de alguns recursos; os anúncios intersticiais aparecem apenas ocasionalmente, com um limite para a frequência com que são exibidos. Como terceiro, a Liftoff pode coletar e processar os seguintes dados por meio do seu SDK:</p>
+      <ul>
+        <li>identificadores do dispositivo: o ID de publicidade do Windows (se você o tiver ativado) e um identificador de hardware que o Windows gera exclusivamente para este app (ASHWID, usado para limitar a frequência com que o mesmo anúncio é exibido e para prevenir fraudes);</li>
+        <li>informações do dispositivo: fabricante e modelo do computador, versão do sistema operacional, idioma e região, fuso horário, tamanho da tela, nível da bateria e estado da economia de bateria, espaço de armazenamento livre e tipo de conexão de rede;</li>
+        <li>endereço IP e a localização aproximada obtida a partir dele;</li>
+        <li>dados de interação com anúncios e de diagnóstico (impressões de anúncios, cliques, desempenho de reprodução e de carregamento).</li>
+      </ul>
+      <p>Esses dados são usados para exibir anúncios, medir o desempenho dos anúncios e prevenir fraudes e abusos e, quando você tiver dado seu consentimento, para personalizar anúncios. A Liftoff processa esses dados de acordo com a própria política de privacidade dela; não recebemos informações que identifiquem você pessoalmente. Consulte a <a href="https://liftoff.io/privacy-policy/" target="_blank" rel="noopener">Política de Privacidade da Liftoff</a>.</p>
+      <p>Você pode controlar os dados de anúncios no app de desktop da seguinte forma:</p>
+      <ul>
+        <li>No Espaço Econômico Europeu, no Reino Unido e na Suíça, anúncios personalizados só são exibidos com o seu consentimento.</li>
+        <li>Em Configurações do Windows → Privacidade e segurança → Geral, desative “Permitir que os aplicativos me mostrem anúncios personalizados usando minha ID de anúncio”.</li>
+        <li>Desative a publicidade baseada em interesses na <a href="https://liftoff.ai/opt-out/" target="_blank" rel="noopener">página de desativação (opt-out) da Liftoff</a>.</li>
+        <li>Com o Paytick Pro, o app de desktop não carrega o SDK de anúncios de forma alguma e não envia nenhum dado à Liftoff.</li>
+      </ul>
+      <p>A Liftoff é usada apenas no app de desktop para Windows; o app para Android não usa a Liftoff.</p>
+
+      <h2>4. Compras e ativação do Paytick Pro (app de desktop)</h2>
+      <p>O app de desktop para Windows é gratuito, e você pode, se quiser, comprar o “Paytick Pro” uma única vez para desbloquear todos os pets, estilos e recursos e remover os anúncios. As compras são processadas pela Dodo Payments na qualidade de merchant of record (o vendedor responsável pela transação): o nome, o e-mail e os dados de pagamento que você informa na página de pagamento dela são coletados e processados pela Dodo Payments. Recebemos apenas informações do pedido (como o produto comprado e o seu e-mail, para fins de suporte ao cliente) e nunca vemos os dados do seu cartão. Consulte a <a href="https://dodopayments.com/legal/privacy-policy" target="_blank" rel="noopener">Política de Privacidade da Dodo Payments</a>.</p>
+      <p>Quando você ativa o Pro no App, ele envia a sua chave de licença e o nome deste computador à Dodo Payments para confirmar que a chave é válida e registrar em qual computador ela está ativada (você pode liberá-la a qualquer momento com “Desativar neste computador” para usá-la em outro computador). A cada poucos dias, o App verifica on-line se a chave continua válida (por exemplo, se ela não foi reembolsada). A sua chave de licença e o registro de ativação são armazenados apenas no seu computador.</p>
+
+      <h2>5. Permissões</h2>
+      <ul>
+        <li><strong>Acesso à rede</strong>: para exibir anúncios, para obter taxas de câmbio quando essa opção estiver ativada e para ativar o Paytick Pro no desktop.</li>
+        <li><strong>Sobrepor a outros apps (janela flutuante)</strong>: usada apenas depois que você ativa “Pet flutuante fora do app”, para mostrar seu pet e seus ganhos na tela inicial. O App não lê o conteúdo de outros apps.</li>
+        <li>No Windows, “Abrir na inicialização” só adiciona o App aos seus itens de inicialização depois que você ativa essa opção.</li>
+      </ul>
+
+      <h2>6. O que não fazemos</h2>
+      <p>Não vendemos seus dados, não compartilhamos seu salário nem seus ajustes com ninguém e não usamos o App para rastrear sua atividade em outros apps ou sites. Além do Google AdMob, do Liftoff Monetize, do serviço de taxas de câmbio e da Dodo Payments descritos acima, o App não envia dados a terceiros.</p>
+
+      <h2>7. Crianças</h2>
+      <p>O App se destina a adultos que trabalham. Ele não é direcionado a crianças menores de 13 anos, e não coletamos intencionalmente informações pessoais de crianças.</p>
+
+      <h2>8. Segurança e retenção de dados</h2>
+      <p>Seus ajustes permanecem no seu dispositivo até que você os altere, limpe os dados do app ou desinstale o App. Não mantemos nenhum servidor que armazene dados de usuários.</p>
+
+      <h2>9. Alterações nesta política</h2>
+      <p>Se esta política mudar, atualizaremos esta página e a data de vigência acima. Alterações significativas serão mencionadas nas notas da versão do App.</p>
+
+      <h2>10. Contato</h2>
+      <p>Se você tiver alguma dúvida sobre esta Política de Privacidade, envie um e-mail para <a href="mailto:happymoneyeverysecond@gmail.com">happymoneyeverysecond@gmail.com</a>.</p>
+    </article>
   </main>
 
   <script>
-    // 显示哪种语言：网址里的 ?lang=en / ?lang=zh 优先（App 里的链接会带上），否则按浏览器语言
+    // 显示哪种语言：网址里的 ?lang=…优先（App 里的链接会带上），否则按浏览器语言；换语言时改网址，分享出去还是这个语言
     (function () {
-      var param = new URLSearchParams(location.search).get('lang');
-      var lang = param === 'en' || param === 'zh' ? param : /^zh/i.test(navigator.language || '') ? 'zh' : 'en';
-      function show(next) {
-        document.querySelectorAll('article[data-lang]').forEach(function (a) {
-          a.hidden = a.dataset.lang !== next;
-        });
-        document.querySelectorAll('.lang button').forEach(function (b) {
-          b.setAttribute('aria-pressed', String(b.dataset.lang === next));
-        });
-        document.documentElement.lang = next === 'zh' ? 'zh-CN' : 'en';
-        document.title = next === 'zh' ? '隐私政策 · 秒薪 Paytick' : 'Privacy Policy · Paytick';
+      var codes = ["zh", "zh-TW", "en", "ja", "ko", "es", "de", "fr", "pt"];
+      function detect(tag) {
+        tag = String(tag || '').toLowerCase().replace(/_/g, '-');
+        if (/^zh-(tw|hk|mo|hant)/.test(tag)) return 'zh-TW';
+        if (/^zh/.test(tag)) return 'zh';
+        var base = tag.split('-')[0];
+        return codes.indexOf(base) >= 0 ? base : 'en';
       }
-      document.querySelectorAll('.lang button').forEach(function (b) {
-        b.addEventListener('click', function () { show(b.dataset.lang); });
+      var param = new URLSearchParams(location.search).get('lang');
+      if (param === 'zh-CN') param = 'zh';
+      var select = document.querySelector('.lang select');
+      function show(next) {
+        var block;
+        document.querySelectorAll('main [data-lang]').forEach(function (el) {
+          el.hidden = el.dataset.lang !== next;
+          if (!el.hidden) block = el;
+        });
+        select.value = next;
+        document.documentElement.lang = block.lang;
+        document.title = block.querySelector('h1').textContent + (next === 'zh' || next === 'zh-TW' ? ' · 秒薪 Paytick' : ' · Paytick');
+      }
+      select.addEventListener('change', function () {
+        show(select.value);
+        history.replaceState(null, '', '?lang=' + select.value);
       });
-      show(lang);
+      show(codes.indexOf(param) >= 0 ? param : detect(navigator.language));
     })();
   </script>
 </body>

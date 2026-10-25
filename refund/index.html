@@ -75,21 +75,15 @@
       gap: 4px;
     }
 
-    .lang button {
+    .lang select {
       padding: 4px 12px;
       border: 1px solid var(--border);
       border-radius: 999px;
-      background: none;
-      color: var(--text-2);
+      background: var(--surface);
+      color: var(--text);
       font: inherit;
       font-size: 14px;
       cursor: pointer;
-    }
-
-    .lang button[aria-pressed="true"] {
-      border-color: var(--accent);
-      color: var(--accent);
-      font-weight: 600;
     }
 
     h1 {
@@ -130,13 +124,10 @@
   <main>
     <header>
       <a class="brand" href="../"><img src="../icon.png" alt="">秒薪 Paytick</a>
-      <div class="lang" role="group" aria-label="Language">
-        <button type="button" data-lang="zh">中文</button>
-        <button type="button" data-lang="en">English</button>
-      </div>
+      <label class="lang"><select aria-label="Language"><option value="zh" lang="zh-CN">简体中文</option><option value="zh-TW" lang="zh-TW">繁體中文</option><option value="en" lang="en">English</option><option value="ja" lang="ja">日本語</option><option value="ko" lang="ko">한국어</option><option value="es" lang="es">Español</option><option value="de" lang="de">Deutsch</option><option value="fr" lang="fr">Français</option><option value="pt" lang="pt">Português</option></select></label>
     </header>
 
-    <!-- ───────────── 中文 ───────────── -->
+    <!-- ───────────── 简体中文 ───────────── -->
     <article lang="zh-CN" data-lang="zh">
       <h1>退款政策</h1>
       <p class="date">生效日期：2026 年 10 月 23 日</p>
@@ -159,6 +150,31 @@
       <p>本政策不影响你依法享有、不能被排除的消费者权利。</p>
     </article>
 
+    <!-- ───────────── 繁體中文 ───────────── -->
+    <article lang="zh-TW" data-lang="zh-TW" hidden>
+      <h1>退款政策</h1>
+      <p class="date">生效日期：2026年10月23日</p>
+      <p class="note">本頁為方便您閱讀而提供的翻譯版本。如與英文版有任何不一致，以英文版為準。<a href="?lang=en">閱讀英文版</a></p>
+
+      <p>本政策適用於在 Windows 桌面應用程式中購買的「秒薪 Pro」。Android 應用程式沒有付費內容，因此不適用退款。</p>
+
+      <h2>1. 7 天內無條件退款</h2>
+      <p>自購買日起 7 天內，您可以基於任何理由申請全額退款。請寄送電子郵件至 <a href="mailto:happymoneyeverysecond@gmail.com">happymoneyeverysecond@gmail.com</a>，並附上您的訂單編號或購買時使用的電子郵件地址。</p>
+
+      <h2>2. 退款處理方式</h2>
+      <p>退款由 Dodo Payments（秒薪 Pro 的登記商家）退回至您原本的付款方式。款項入帳所需的時間，依您的付款方式及銀行而定。</p>
+
+      <h2>3. 退款後的 Pro</h2>
+      <p>退款完成後，授權碼將被停用，所有電腦上的 Pro 功能都會停止，本 App 將恢復為免費版。您的薪資設定及其他資料不受影響。</p>
+
+      <h2>4. 超過 7 天</h2>
+      <p>購買超過 7 天後，恕不提供退款。如果您遇到任何問題，歡迎隨時與我們聯絡，我們會協助您解決。</p>
+
+      <h2>5. 您的法定權利</h2>
+      <p>本政策不影響依法不得排除的消費者權利。</p>
+    </article>
+
+    <!-- ───────────── English ───────────── -->
     <article lang="en" data-lang="en" hidden>
       <h1>Refund Policy</h1>
       <p class="date">Effective date: 23 October 2026</p>
@@ -179,27 +195,182 @@
 
       <h2>5. Your statutory rights</h2>
       <p>This policy does not affect consumer rights that cannot be excluded by law.</p>
+    </article>
+
+    <!-- ───────────── 日本語 ───────────── -->
+    <article lang="ja" data-lang="ja" hidden>
+      <h1>返金ポリシー</h1>
+      <p class="date">施行日：2026年10月23日</p>
+      <p class="note">これはお客様の便宜のための翻訳です。英語版と内容が異なる場合は、英語版が優先されます。<a href="?lang=en">英語版を読む</a></p>
+
+      <p>本ポリシーは、Windowsデスクトップアプリで購入された「Paytick Pro」に適用されます。Androidアプリには有料コンテンツがないため、返金は適用されません。</p>
+
+      <h2>1. 7日間、理由を問わず返金</h2>
+      <p>購入から7日以内であれば、理由を問わず全額返金をご請求いただけます。注文番号または購入時に使用したメールアドレスを添えて、<a href="mailto:happymoneyeverysecond@gmail.com">happymoneyeverysecond@gmail.com</a>までメールでご連絡ください。</p>
+
+      <h2>2. 返金の処理方法</h2>
+      <p>返金は、Dodo Payments（Paytick Proの販売者（Merchant of Record））により、購入時のお支払い方法に対して行われます。返金が反映されるまでの期間は、お支払い方法や銀行によって異なります。</p>
+
+      <h2>3. 返金後のPro</h2>
+      <p>返金が完了すると、ライセンスキーは無効になり、すべてのコンピューターでPro機能が停止し、本アプリは無料版に戻ります。給与の設定やその他のデータには影響しません。</p>
+
+      <h2>4. 7日を過ぎた場合</h2>
+      <p>購入から7日を過ぎた場合、返金はお受けできません。問題が発生した場合は、いつでもお問い合わせください。解決のお手伝いをいたします。</p>
+
+      <h2>5. お客様の法定の権利</h2>
+      <p>本ポリシーは、法律により排除することのできない消費者の権利に影響を与えるものではありません。</p>
+    </article>
+
+    <!-- ───────────── 한국어 ───────────── -->
+    <article lang="ko" data-lang="ko" hidden>
+      <h1>환불 정책</h1>
+      <p class="date">시행일: 2026년 10월 23일</p>
+      <p class="note">이 번역은 이해를 돕기 위해 제공됩니다. 영어 원문과 내용이 다를 경우 영어 원문이 우선 적용됩니다. <a href="?lang=en">영어 원문 보기</a></p>
+
+      <p>이 정책은 Windows 데스크톱 앱에서 구매한 “Paytick Pro”에 적용됩니다. Android 앱에는 유료 콘텐츠가 없으므로 환불이 적용되지 않습니다.</p>
+
+      <h2>1. 7일 이내 무조건 환불</h2>
+      <p>구매 후 7일 이내에는 어떤 이유로든 전액 환불을 요청할 수 있습니다. 주문 번호 또는 구매할 때 사용한 이메일 주소를 기재하여 <a href="mailto:happymoneyeverysecond@gmail.com">happymoneyeverysecond@gmail.com</a>으로 이메일을 보내 주시기 바랍니다.</p>
+
+      <h2>2. 환불 처리 방법</h2>
+      <p>환불은 Dodo Payments(Paytick Pro의 판매 대행자, Merchant of Record)가 원래 결제 수단으로 진행합니다. 환불금이 도착하기까지 걸리는 시간은 결제 수단과 은행에 따라 다릅니다.</p>
+
+      <h2>3. 환불 후 Pro</h2>
+      <p>환불이 완료되면 라이선스 키가 비활성화되고, 모든 컴퓨터에서 Pro 기능이 중지되며, 앱은 무료 버전으로 돌아갑니다. 급여 설정과 그 밖의 데이터에는 영향이 없습니다.</p>
+
+      <h2>4. 7일이 지난 경우</h2>
+      <p>구매 후 7일이 지나면 환불받을 수 없습니다. 문제가 생기면 언제든지 연락해 주십시오. 해결할 수 있도록 도와드리겠습니다.</p>
+
+      <h2>5. 법적 권리</h2>
+      <p>이 정책은 법률상 배제할 수 없는 소비자 권리에 영향을 미치지 않습니다.</p>
+    </article>
+
+    <!-- ───────────── Español ───────────── -->
+    <article lang="es" data-lang="es" hidden>
+      <h1>Política de reembolso</h1>
+      <p class="date">Fecha de entrada en vigor: 23 de octubre de 2026</p>
+      <p class="note">Esta es una traducción para tu comodidad. Si difiere de la versión en inglés, prevalece la versión en inglés. <a href="?lang=en">Leer la versión en inglés</a></p>
+
+      <p>Esta política se aplica a “Paytick Pro” comprado en la app de escritorio para Windows. La app para Android no tiene contenido de pago, por lo que los reembolsos no se aplican a ella.</p>
+
+      <h2>1. Reembolsos sin preguntas durante 7 días</h2>
+      <p>Dentro de los 7 días posteriores a la compra, puedes solicitar un reembolso completo por cualquier motivo. Escribe a <a href="mailto:happymoneyeverysecond@gmail.com">happymoneyeverysecond@gmail.com</a> indicando tu número de pedido o la dirección de correo electrónico que usaste para comprar.</p>
+
+      <h2>2. Cómo se procesan los reembolsos</h2>
+      <p>Los reembolsos los emite Dodo Payments (el comerciante registrado de Paytick Pro) a tu método de pago original. El tiempo que tarda en llegar depende de tu método de pago y de tu banco.</p>
+
+      <h2>3. Pro después de un reembolso</h2>
+      <p>Una vez completado el reembolso, la clave de licencia se desactiva, las funciones Pro dejan de funcionar en todos los equipos y la App vuelve a la versión gratuita. Tus ajustes de sueldo y demás datos no se ven afectados.</p>
+
+      <h2>4. Pasados 7 días</h2>
+      <p>No se ofrecen reembolsos una vez transcurridos más de 7 días desde la compra. Si tienes algún problema, contáctanos en cualquier momento y te ayudaremos a resolverlo.</p>
+
+      <h2>5. Tus derechos legales</h2>
+      <p>Esta política no afecta a los derechos del consumidor que no pueden excluirse por ley.</p>
+    </article>
+
+    <!-- ───────────── Deutsch ───────────── -->
+    <article lang="de" data-lang="de" hidden>
+      <h1>Rückerstattungsrichtlinie</h1>
+      <p class="date">Gültig ab: 23. Oktober 2026</p>
+      <p class="note">Diese Übersetzung dient nur deiner Information. Weicht sie von der englischen Fassung ab, gilt die englische Fassung. <a href="?lang=en">Englische Fassung lesen</a></p>
+
+      <p>Diese Richtlinie gilt für „Paytick Pro“, das in der Windows-Desktop-App gekauft wurde. Die Android-App hat keine kostenpflichtigen Inhalte, daher gelten Rückerstattungen für sie nicht.</p>
+
+      <h2>1. Rückerstattung innerhalb von 7 Tagen ohne Angabe von Gründen</h2>
+      <p>Innerhalb von 7 Tagen nach dem Kauf kannst du aus beliebigem Grund eine vollständige Rückerstattung verlangen. Schreib eine E-Mail an <a href="mailto:happymoneyeverysecond@gmail.com">happymoneyeverysecond@gmail.com</a> mit deiner Bestellnummer oder der E-Mail-Adresse, die du beim Kauf verwendet hast.</p>
+
+      <h2>2. So werden Rückerstattungen abgewickelt</h2>
+      <p>Rückerstattungen werden von Dodo Payments (dem Verkäufer bzw. Merchant of Record für Paytick Pro) auf dein ursprüngliches Zahlungsmittel ausgezahlt. Wie lange es dauert, bis sie ankommen, hängt von deinem Zahlungsmittel und deiner Bank ab.</p>
+
+      <h2>3. Pro nach einer Rückerstattung</h2>
+      <p>Sobald die Rückerstattung abgeschlossen ist, wird der Lizenzschlüssel deaktiviert, die Pro-Funktionen enden auf jedem Computer, und die App kehrt zur kostenlosen Version zurück. Deine Lohneinstellungen und anderen Daten sind davon nicht betroffen.</p>
+
+      <h2>4. Nach 7 Tagen</h2>
+      <p>Mehr als 7 Tage nach dem Kauf sind keine Rückerstattungen möglich. Wenn du auf ein Problem stößt, kontaktiere uns jederzeit, und wir helfen dir, es zu lösen.</p>
+
+      <h2>5. Deine gesetzlichen Rechte</h2>
+      <p>Diese Richtlinie berührt keine Verbraucherrechte, die gesetzlich nicht ausgeschlossen werden können.</p>
+    </article>
+
+    <!-- ───────────── Français ───────────── -->
+    <article lang="fr" data-lang="fr" hidden>
+      <h1>Politique de remboursement</h1>
+      <p class="date">Date d’entrée en vigueur : 23 octobre 2026</p>
+      <p class="note">Cette traduction est fournie pour ta commodité. En cas de divergence avec la version anglaise, c’est la version anglaise qui prévaut. <a href="?lang=en">Lire la version anglaise</a></p>
+
+      <p>Cette politique s’applique à « Paytick Pro » acheté dans l’application de bureau Windows. L’application Android ne propose aucun contenu payant ; les remboursements ne la concernent donc pas.</p>
+
+      <h2>1. Remboursement sous 7 jours, sans justification</h2>
+      <p>Dans les 7 jours suivant l’achat, tu peux demander un remboursement intégral pour quelque raison que ce soit. Envoie un e-mail à <a href="mailto:happymoneyeverysecond@gmail.com">happymoneyeverysecond@gmail.com</a> en indiquant ton numéro de commande ou l’adresse e-mail utilisée pour l’achat.</p>
+
+      <h2>2. Traitement des remboursements</h2>
+      <p>Les remboursements sont effectués par Dodo Payments (le marchand officiel de Paytick Pro) sur ton moyen de paiement d’origine. Le délai de réception dépend de ton moyen de paiement et de ta banque.</p>
+
+      <h2>3. Pro après un remboursement</h2>
+      <p>Une fois le remboursement effectué, la clé de licence est désactivée, les fonctionnalités Pro cessent de fonctionner sur tous les ordinateurs et l’Application repasse à la version gratuite. Tes réglages de salaire et tes autres données ne sont pas affectés.</p>
+
+      <h2>4. Après 7 jours</h2>
+      <p>Aucun remboursement n’est possible plus de 7 jours après l’achat. Si tu rencontres un problème, contacte-nous à tout moment et nous t’aiderons à le résoudre.</p>
+
+      <h2>5. Tes droits légaux</h2>
+      <p>Cette politique ne porte pas atteinte aux droits des consommateurs qui ne peuvent pas être exclus par la loi.</p>
+    </article>
+
+    <!-- ───────────── Português ───────────── -->
+    <article lang="pt" data-lang="pt" hidden>
+      <h1>Política de Reembolso</h1>
+      <p class="date">Data de vigência: 23 de outubro de 2026</p>
+      <p class="note">Esta é uma tradução oferecida para sua conveniência. Se houver divergência em relação à versão em inglês, prevalece a versão em inglês. <a href="?lang=en">Ler a versão em inglês</a></p>
+
+      <p>Esta política se aplica ao “Paytick Pro” comprado no app de desktop para Windows. O app para Android não tem conteúdo pago, portanto os reembolsos não se aplicam a ele.</p>
+
+      <h2>1. Reembolso em até 7 dias, sem perguntas</h2>
+      <p>Em até 7 dias após a compra, você pode solicitar o reembolso total por qualquer motivo. Envie um e-mail para <a href="mailto:happymoneyeverysecond@gmail.com">happymoneyeverysecond@gmail.com</a> com o número do pedido ou o endereço de e-mail que você usou na compra.</p>
+
+      <h2>2. Como os reembolsos são processados</h2>
+      <p>Os reembolsos são emitidos pela Dodo Payments (o merchant of record, ou vendedor responsável pela transação, do Paytick Pro) para a sua forma de pagamento original. O prazo para o valor chegar depende da sua forma de pagamento e do seu banco.</p>
+
+      <h2>3. O Pro após um reembolso</h2>
+      <p>Assim que o reembolso for concluído, a chave de licença é desativada, os recursos Pro deixam de funcionar em todos os computadores e o App volta à versão gratuita. Seus ajustes de salário e outros dados não são afetados.</p>
+
+      <h2>4. Após 7 dias</h2>
+      <p>Não há reembolso depois de passados mais de 7 dias da compra. Se você tiver algum problema, fale conosco a qualquer momento e ajudaremos você a resolvê-lo.</p>
+
+      <h2>5. Seus direitos legais</h2>
+      <p>Esta política não afeta direitos do consumidor que não possam ser excluídos por lei.</p>
+    </article>
   </main>
 
   <script>
-    // 显示哪种语言：网址里的 ?lang=en / ?lang=zh 优先（App 里的链接会带上），否则按浏览器语言
+    // 显示哪种语言：网址里的 ?lang=…优先（App 里的链接会带上），否则按浏览器语言；换语言时改网址，分享出去还是这个语言
     (function () {
-      var param = new URLSearchParams(location.search).get('lang');
-      var lang = param === 'en' || param === 'zh' ? param : /^zh/i.test(navigator.language || '') ? 'zh' : 'en';
-      function show(next) {
-        document.querySelectorAll('article[data-lang]').forEach(function (a) {
-          a.hidden = a.dataset.lang !== next;
-        });
-        document.querySelectorAll('.lang button').forEach(function (b) {
-          b.setAttribute('aria-pressed', String(b.dataset.lang === next));
-        });
-        document.documentElement.lang = next === 'zh' ? 'zh-CN' : 'en';
-        document.title = next === 'zh' ? '退款政策 · 秒薪 Paytick' : 'Refund Policy · Paytick';
+      var codes = ["zh", "zh-TW", "en", "ja", "ko", "es", "de", "fr", "pt"];
+      function detect(tag) {
+        tag = String(tag || '').toLowerCase().replace(/_/g, '-');
+        if (/^zh-(tw|hk|mo|hant)/.test(tag)) return 'zh-TW';
+        if (/^zh/.test(tag)) return 'zh';
+        var base = tag.split('-')[0];
+        return codes.indexOf(base) >= 0 ? base : 'en';
       }
-      document.querySelectorAll('.lang button').forEach(function (b) {
-        b.addEventListener('click', function () { show(b.dataset.lang); });
+      var param = new URLSearchParams(location.search).get('lang');
+      if (param === 'zh-CN') param = 'zh';
+      var select = document.querySelector('.lang select');
+      function show(next) {
+        var block;
+        document.querySelectorAll('main [data-lang]').forEach(function (el) {
+          el.hidden = el.dataset.lang !== next;
+          if (!el.hidden) block = el;
+        });
+        select.value = next;
+        document.documentElement.lang = block.lang;
+        document.title = block.querySelector('h1').textContent + (next === 'zh' || next === 'zh-TW' ? ' · 秒薪 Paytick' : ' · Paytick');
+      }
+      select.addEventListener('change', function () {
+        show(select.value);
+        history.replaceState(null, '', '?lang=' + select.value);
       });
-      show(lang);
+      show(codes.indexOf(param) >= 0 ? param : detect(navigator.language));
     })();
   </script>
 </body>

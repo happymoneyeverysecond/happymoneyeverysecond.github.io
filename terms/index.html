@@ -75,21 +75,15 @@
       gap: 4px;
     }
 
-    .lang button {
+    .lang select {
       padding: 4px 12px;
       border: 1px solid var(--border);
       border-radius: 999px;
-      background: none;
-      color: var(--text-2);
+      background: var(--surface);
+      color: var(--text);
       font: inherit;
       font-size: 14px;
       cursor: pointer;
-    }
-
-    .lang button[aria-pressed="true"] {
-      border-color: var(--accent);
-      color: var(--accent);
-      font-weight: 600;
     }
 
     h1 {
@@ -130,13 +124,10 @@
   <main>
     <header>
       <a class="brand" href="../"><img src="../icon.png" alt="">秒薪 Paytick</a>
-      <div class="lang" role="group" aria-label="Language">
-        <button type="button" data-lang="zh">中文</button>
-        <button type="button" data-lang="en">English</button>
-      </div>
+      <label class="lang"><select aria-label="Language"><option value="zh" lang="zh-CN">简体中文</option><option value="zh-TW" lang="zh-TW">繁體中文</option><option value="en" lang="en">English</option><option value="ja" lang="ja">日本語</option><option value="ko" lang="ko">한국어</option><option value="es" lang="es">Español</option><option value="de" lang="de">Deutsch</option><option value="fr" lang="fr">Français</option><option value="pt" lang="pt">Português</option></select></label>
     </header>
 
-    <!-- ───────────── 中文 ───────────── -->
+    <!-- ───────────── 简体中文 ───────────── -->
     <article lang="zh-CN" data-lang="zh">
       <h1>服务条款</h1>
       <p class="date">生效日期：2026 年 10 月 23 日</p>
@@ -179,6 +170,51 @@
       <p>如有任何问题，请发邮件至 <a href="mailto:happymoneyeverysecond@gmail.com">happymoneyeverysecond@gmail.com</a>。</p>
     </article>
 
+    <!-- ───────────── 繁體中文 ───────────── -->
+    <article lang="zh-TW" data-lang="zh-TW" hidden>
+      <h1>服務條款</h1>
+      <p class="date">生效日期：2026年10月23日</p>
+      <p class="note">本頁為方便您閱讀而提供的翻譯版本。如與英文版有任何不一致，以英文版為準。<a href="?lang=en">閱讀英文版</a></p>
+
+      <p>本條款適用於秒薪（英文名稱 Paytick），包括 Windows 桌面應用程式及 Android 應用程式（以下合稱「本 App」）。本 App 由紐西蘭個人開發者 Pengcheng Hu（以下稱「我們」）開發及營運。您下載、安裝或使用本 App，即表示您同意本條款。</p>
+
+      <h2>1. 授權</h2>
+      <p>我們授予您個人、非專屬且不可轉讓的授權，讓您在自己的裝置上使用本 App。您不得出售、出租或重新散布本 App，不得散布本 App 的修改版本，亦不得規避 Pro 啟用或廣告解鎖機制。</p>
+
+      <h2>2. 秒薪 Pro（桌面應用程式）</h2>
+      <ul>
+        <li>桌面應用程式可免費使用。「秒薪 Pro」為一次性購買（價格以結帳時顯示的金額為準，含當地稅金），可永久解鎖 Pro 功能，無需訂閱。</li>
+        <li>購買後，您會透過電子郵件收到授權碼。一組授權碼可在 1 台電腦上啟用。如需更換電腦，請先在舊電腦的本 App 中停用授權碼，再於新電腦上啟用。我們不提供授權轉移服務：如果授權碼無法在舊電腦上停用，就無法轉移到新電腦。授權碼僅供您個人使用，不得轉售或公開分享。</li>
+        <li>本 App 每隔幾天會連線確認授權碼仍然有效。如果連續 30 天無法確認，Pro 功能將暫停，直到下次確認成功為止。</li>
+        <li>我們可能會變更 Pro 所包含的功能。如果您已購買 Pro，您不會因此類變更而失去已擁有的功能。</li>
+      </ul>
+
+      <h2>3. 付款</h2>
+      <p>秒薪 Pro 透過 Dodo Payments 以登記商家（merchant of record）的身分銷售。Dodo Payments 負責處理付款、開立發票及稅務，其買方條款亦適用於您的付款。</p>
+
+      <h2>4. 退款</h2>
+      <p>請參閱我們的<a href="../refund/?lang=zh-TW">退款政策</a>。</p>
+
+      <h2>5. Android 應用程式與廣告</h2>
+      <p>Android 應用程式為免費提供。部分角色、配色及其他內容可透過觀看獎勵廣告解鎖。解鎖內容儲存在您的手機上；如果您解除安裝本 App 或清除其資料，可能需要重新解鎖。</p>
+
+      <h2>6. 僅供估算</h2>
+      <p>本 App 依據您輸入的薪資和作息估算您的收入。計算結果僅供參考，並非薪資計算、稅務或財務建議。一切以雇主實際支付的薪資為準。</p>
+
+      <h2>7. 免責聲明</h2>
+      <p>本 App 依「現狀」提供。在法律允許的最大範圍內，對於您因使用本 App 而產生的間接損失，我們不負任何責任，且我們的總責任以您實際為本 App 支付的金額為限。本條款的任何內容均不限制依法不得排除的消費者權利（例如紐西蘭《消費者保障法》（Consumer Guarantees Act）所賦予的權利）。</p>
+
+      <h2>8. 變更</h2>
+      <p>我們可能會更新本 App 或本條款。如本條款有所變更，我們將更新本頁面及上方的生效日期，並在本 App 的版本資訊中說明重大變更。</p>
+
+      <h2>9. 準據法</h2>
+      <p>本條款受紐西蘭法律管轄。</p>
+
+      <h2>10. 聯絡我們</h2>
+      <p>如有任何疑問，請寄送電子郵件至 <a href="mailto:happymoneyeverysecond@gmail.com">happymoneyeverysecond@gmail.com</a>。</p>
+    </article>
+
+    <!-- ───────────── English ───────────── -->
     <article lang="en" data-lang="en" hidden>
       <h1>Terms of Service</h1>
       <p class="date">Effective date: 23 October 2026</p>
@@ -219,27 +255,302 @@
 
       <h2>10. Contact</h2>
       <p>If you have any questions, please email <a href="mailto:happymoneyeverysecond@gmail.com">happymoneyeverysecond@gmail.com</a>.</p>
+    </article>
+
+    <!-- ───────────── 日本語 ───────────── -->
+    <article lang="ja" data-lang="ja" hidden>
+      <h1>利用規約</h1>
+      <p class="date">施行日：2026年10月23日</p>
+      <p class="note">これはお客様の便宜のための翻訳です。英語版と内容が異なる場合は、英語版が優先されます。<a href="?lang=en">英語版を読む</a></p>
+
+      <p>本規約は、WindowsデスクトップアプリおよびAndroidアプリを含むPaytick（中国語名：秒薪）（以下総称して「本アプリ」）に適用されます。本アプリは、ニュージーランドの個人開発者であるPengcheng Hu（以下「当方」）が開発および運営しています。本アプリをダウンロード、インストール、または使用することにより、お客様は本規約に同意したものとします。</p>
+
+      <h2>1. ライセンス</h2>
+      <p>当方は、お客様ご自身のデバイスで本アプリを使用するための、個人的、非独占的かつ譲渡不能なライセンスをお客様に付与します。お客様は、本アプリを販売、貸与もしくは再配布すること、本アプリの改変版を配布すること、またはProの有効化もしくは広告による解放を回避することはできません。</p>
+
+      <h2>2. Paytick Pro（デスクトップアプリ）</h2>
+      <ul>
+        <li>デスクトップアプリは無料でご利用いただけます。「Paytick Pro」は買い切りの商品で（購入手続き時に表示される価格が適用され、現地の税金を含みます）、サブスクリプションなしでPro機能を永久に解放します。</li>
+        <li>購入後、ライセンスキーがメールで届きます。1つのキーは1台のコンピューターで有効にできます。コンピューターを切り替えるには、まず古いコンピューターの本アプリでキーを無効化し、その後新しいコンピューターで有効化してください。当方はライセンスの移行を行っていません。古いコンピューターでキーを無効化できない場合、そのキーを新しいコンピューターに移すことはできません。キーはお客様の個人的な使用に限られ、転売したり公に共有したりすることはできません。</li>
+        <li>本アプリは数日ごとに、キーが引き続き有効であることをオンラインで確認します。30日間確認できなかった場合、次に確認が成功するまでPro機能は一時停止されます。</li>
+        <li>当方は、Proに含まれる機能を変更することがあります。すでにProを購入されている場合、そのような変更によって、すでにお持ちの機能を失うことはありません。</li>
+      </ul>
+
+      <h2>3. お支払い</h2>
+      <p>Paytick Proは、Dodo Paymentsを販売者（Merchant of Record）として販売されます。Dodo Paymentsが支払い、請求書の発行および税金を取り扱い、お客様のお支払いには同社の購入者向け規約も適用されます。</p>
+
+      <h2>4. 返金</h2>
+      <p>当方の<a href="../refund/?lang=ja">返金ポリシー</a>をご覧ください。</p>
+
+      <h2>5. Androidアプリと広告</h2>
+      <p>Androidアプリは無料です。一部のキャラクター、カラー、その他のコンテンツは、リワード広告を視聴することで解放できます。解放された内容はお客様のスマートフォンに保存されるため、本アプリをアンインストールした場合やアプリのデータを消去した場合には、再度解放が必要になることがあります。</p>
+
+      <h2>6. 推定値に限ります</h2>
+      <p>本アプリは、お客様が入力した給与と勤務スケジュールから収入を推定します。結果は参考情報にすぎず、給与計算、税務または財務に関する助言ではありません。実際の金額は、お客様の雇用主による支払いが基準となります。</p>
+
+      <h2>7. 免責事項</h2>
+      <p>本アプリは「現状のまま」提供されます。法律で認められる最大限の範囲において、当方は、お客様による本アプリの使用から生じる間接的な損失について責任を負わず、当方の責任の総額は、お客様が本アプリに対して実際に支払った金額を上限とします。本規約のいかなる規定も、法律により排除することのできない消費者の権利（例えば、ニュージーランドの消費者保証法（Consumer Guarantees Act）に基づく権利）を制限するものではありません。</p>
+
+      <h2>8. 変更</h2>
+      <p>当方は、本アプリまたは本規約を更新することがあります。本規約を変更する場合、当方はこのページおよび上記の施行日を更新し、重要な変更については本アプリのリリースノートでお知らせします。</p>
+
+      <h2>9. 準拠法</h2>
+      <p>本規約は、ニュージーランドの法律に準拠します。</p>
+
+      <h2>10. お問い合わせ</h2>
+      <p>ご質問がある場合は、<a href="mailto:happymoneyeverysecond@gmail.com">happymoneyeverysecond@gmail.com</a>までメールでお問い合わせください。</p>
+    </article>
+
+    <!-- ───────────── 한국어 ───────────── -->
+    <article lang="ko" data-lang="ko" hidden>
+      <h1>서비스 이용약관</h1>
+      <p class="date">시행일: 2026년 10월 23일</p>
+      <p class="note">이 번역은 이해를 돕기 위해 제공됩니다. 영어 원문과 내용이 다를 경우 영어 원문이 우선 적용됩니다. <a href="?lang=en">영어 원문 보기</a></p>
+
+      <p>이 약관은 Windows 데스크톱 앱과 Android 앱(이하 통칭 “앱”)을 포함한 Paytick(중국어 이름 秒薪)에 적용됩니다. 앱은 뉴질랜드의 개인 개발자 Pengcheng Hu(이하 “저희”)가 개발하고 운영합니다. 앱을 다운로드, 설치 또는 사용하면 이 약관에 동의하는 것으로 간주됩니다.</p>
+
+      <h2>1. 라이선스</h2>
+      <p>저희는 사용자가 본인의 기기에서 앱을 사용할 수 있도록 개인적이고 비독점적이며 양도할 수 없는 라이선스를 부여합니다. 사용자는 앱을 판매, 대여 또는 재배포하거나, 앱을 수정한 버전을 배포하거나, Pro 활성화 또는 광고 잠금 해제를 우회해서는 안 됩니다.</p>
+
+      <h2>2. Paytick Pro(데스크톱 앱)</h2>
+      <ul>
+        <li>데스크톱 앱은 무료로 사용할 수 있습니다. “Paytick Pro”는 1회 구매 상품(결제 화면에 표시되는 가격이 적용되며, 현지 세금이 포함됩니다)으로, 구독 없이 Pro 기능을 영구적으로 잠금 해제합니다.</li>
+        <li>구매 후 이메일로 라이선스 키를 받게 됩니다. 키 하나는 컴퓨터 1대에서 활성화할 수 있습니다. 컴퓨터를 바꾸려면 먼저 기존 컴퓨터의 앱에서 키를 비활성화한 후 새 컴퓨터에서 활성화하십시오. 라이선스 이전은 제공하지 않습니다. 즉, 기존 컴퓨터에서 키를 비활성화할 수 없으면 새 컴퓨터로 옮길 수 없습니다. 키는 본인의 개인적인 용도로만 사용할 수 있으며, 재판매하거나 공개적으로 공유해서는 안 됩니다.</li>
+        <li>앱은 며칠마다 온라인으로 키가 여전히 유효한지 확인합니다. 30일 동안 확인하지 못하면 다음에 확인에 성공할 때까지 Pro 기능이 일시 중지됩니다.</li>
+        <li>저희는 Pro에 포함되는 기능을 변경할 수 있습니다. 이미 Pro를 구매한 경우, 이러한 변경으로 인해 이미 보유한 기능을 잃지 않습니다.</li>
+      </ul>
+
+      <h2>3. 결제</h2>
+      <p>Paytick Pro는 판매 대행자(Merchant of Record)인 Dodo Payments를 통해 판매됩니다. Dodo Payments가 결제, 청구서 발행 및 세금을 처리하며, 사용자의 결제에는 Dodo Payments의 구매자 약관도 적용됩니다.</p>
+
+      <h2>4. 환불</h2>
+      <p>저희의 <a href="../refund/?lang=ko">환불 정책</a>을 참고하시기 바랍니다.</p>
+
+      <h2>5. Android 앱과 광고</h2>
+      <p>Android 앱은 무료입니다. 일부 캐릭터, 색상 및 기타 콘텐츠는 보상형 광고를 시청하여 잠금 해제할 수 있습니다. 잠금 해제 내역은 휴대폰에 저장되며, 앱을 제거하거나 앱 데이터를 지우면 다시 잠금 해제해야 할 수 있습니다.</p>
+
+      <h2>6. 추정치 안내</h2>
+      <p>앱은 사용자가 입력한 급여와 근무 일정을 바탕으로 수입을 추정합니다. 결과는 참고용일 뿐이며, 급여 계산, 세무 또는 재무 조언이 아닙니다. 실제 기준은 고용주가 지급하는 금액입니다.</p>
+
+      <h2>7. 면책 조항</h2>
+      <p>앱은 “있는 그대로” 제공됩니다. 법률이 허용하는 최대 범위에서, 저희는 사용자의 앱 사용으로 인해 발생하는 간접적인 손실에 대해 책임지지 않으며, 저희의 총 책임은 사용자가 앱에 실제로 지불한 금액으로 제한됩니다. 이 약관의 어떠한 내용도 법률상 배제할 수 없는 소비자 권리(예: 뉴질랜드 소비자 보장법(Consumer Guarantees Act)에 따른 권리)를 제한하지 않습니다.</p>
+
+      <h2>8. 변경</h2>
+      <p>저희는 앱이나 이 약관을 업데이트할 수 있습니다. 이 약관이 변경되면 이 페이지와 위의 시행일을 업데이트하고, 중요한 변경 사항은 앱 릴리스 노트를 통해 알려 드립니다.</p>
+
+      <h2>9. 준거법</h2>
+      <p>이 약관은 뉴질랜드 법률의 적용을 받습니다.</p>
+
+      <h2>10. 문의</h2>
+      <p>궁금한 점이 있으시면 <a href="mailto:happymoneyeverysecond@gmail.com">happymoneyeverysecond@gmail.com</a>으로 이메일을 보내 주시기 바랍니다.</p>
+    </article>
+
+    <!-- ───────────── Español ───────────── -->
+    <article lang="es" data-lang="es" hidden>
+      <h1>Términos del servicio</h1>
+      <p class="date">Fecha de entrada en vigor: 23 de octubre de 2026</p>
+      <p class="note">Esta es una traducción para tu comodidad. Si difiere de la versión en inglés, prevalece la versión en inglés. <a href="?lang=en">Leer la versión en inglés</a></p>
+
+      <p>Estos términos se aplican a Paytick (nombre en chino: 秒薪), incluidas la app de escritorio para Windows y la app para Android (en conjunto, “la App”). La App la desarrolla y gestiona Pengcheng Hu, un desarrollador individual de Nueva Zelanda (“nosotros”). Al descargar, instalar o usar la App, aceptas estos términos.</p>
+
+      <h2>1. Licencia</h2>
+      <p>Te otorgamos una licencia personal, no exclusiva e intransferible para usar la App en tus propios dispositivos. No puedes vender, alquilar ni redistribuir la App, distribuir versiones modificadas de ella, ni eludir la activación de Pro o los desbloqueos mediante anuncios.</p>
+
+      <h2>2. Paytick Pro (app de escritorio)</h2>
+      <ul>
+        <li>La app de escritorio es de uso gratuito. “Paytick Pro” es una compra única (se aplica el precio que se muestra al pagar, incluidos los impuestos locales) que desbloquea las funciones Pro de forma permanente, sin suscripción.</li>
+        <li>Después de la compra, recibes una clave de licencia por correo electrónico. Una clave puede estar activa en 1 equipo. Para cambiar de equipo, primero desactívala en la App en el equipo anterior y luego actívala en el nuevo. No ofrecemos transferencias de licencia: si la clave no se puede desactivar en el equipo anterior, no se puede trasladar a uno nuevo. La clave es solo para tu uso personal y no puede revenderse ni compartirse públicamente.</li>
+        <li>Cada pocos días, la App comprueba en línea que la clave sigue siendo válida. Si no se puede comprobar durante 30 días, las funciones Pro se pausan hasta la siguiente comprobación correcta.</li>
+        <li>Podemos cambiar qué funciones incluye Pro. Si ya has comprado Pro, no perderás las funciones que ya tienes a causa de esos cambios.</li>
+      </ul>
+
+      <h2>3. Pago</h2>
+      <p>Paytick Pro se vende a través de Dodo Payments como comerciante registrado (merchant of record). Dodo Payments gestiona el pago, la facturación y los impuestos, y sus condiciones para compradores también se aplican a tu pago.</p>
+
+      <h2>4. Reembolsos</h2>
+      <p>Consulta nuestra <a href="../refund/?lang=es">Política de reembolso</a>.</p>
+
+      <h2>5. App para Android y anuncios</h2>
+      <p>La app para Android es gratuita. Algunos personajes, colores y otros contenidos se pueden desbloquear viendo anuncios con recompensa. Los desbloqueos se guardan en tu teléfono y es posible que tengas que volver a desbloquearlos si desinstalas la App o borras sus datos.</p>
+
+      <h2>6. Solo estimaciones</h2>
+      <p>La App estima tus ingresos a partir del sueldo y el horario que introduces. Los resultados son solo orientativos y no constituyen asesoramiento sobre nóminas, impuestos ni finanzas. Lo que cuenta es el pago que realice tu empleador.</p>
+
+      <h2>7. Exención de responsabilidad</h2>
+      <p>La App se proporciona “tal cual”. En la máxima medida permitida por la ley, no somos responsables de las pérdidas indirectas derivadas de tu uso de la App, y nuestra responsabilidad total se limita a la cantidad que hayas pagado efectivamente por la App. Nada de lo dispuesto en estos términos limita los derechos del consumidor que no pueden excluirse por ley (por ejemplo, los derechos previstos en la Consumer Guarantees Act, la ley de garantías al consumidor de Nueva Zelanda).</p>
+
+      <h2>8. Cambios</h2>
+      <p>Podemos actualizar la App o estos términos. Si estos términos cambian, actualizaremos esta página y la fecha de entrada en vigor indicada arriba, y mencionaremos los cambios importantes en las notas de la versión de la App.</p>
+
+      <h2>9. Legislación aplicable</h2>
+      <p>Estos términos se rigen por las leyes de Nueva Zelanda.</p>
+
+      <h2>10. Contacto</h2>
+      <p>Si tienes alguna pregunta, envía un correo electrónico a <a href="mailto:happymoneyeverysecond@gmail.com">happymoneyeverysecond@gmail.com</a>.</p>
+    </article>
+
+    <!-- ───────────── Deutsch ───────────── -->
+    <article lang="de" data-lang="de" hidden>
+      <h1>Nutzungsbedingungen</h1>
+      <p class="date">Gültig ab: 23. Oktober 2026</p>
+      <p class="note">Diese Übersetzung dient nur deiner Information. Weicht sie von der englischen Fassung ab, gilt die englische Fassung. <a href="?lang=en">Englische Fassung lesen</a></p>
+
+      <p>Diese Bedingungen gelten für Paytick (chinesischer Name 秒薪), einschließlich der Windows-Desktop-App und der Android-App (zusammen „die App“). Die App wird von Pengcheng Hu, einem Einzelentwickler in Neuseeland („wir“, „uns“), entwickelt und betrieben. Indem du die App herunterlädst, installierst oder nutzt, stimmst du diesen Bedingungen zu.</p>
+
+      <h2>1. Lizenz</h2>
+      <p>Wir gewähren dir eine persönliche, nicht ausschließliche, nicht übertragbare Lizenz zur Nutzung der App auf deinen eigenen Geräten. Du darfst die App nicht verkaufen, vermieten oder weiterverbreiten, keine veränderten Versionen davon verbreiten und weder die Pro-Aktivierung noch die Freischaltungen per Werbung umgehen.</p>
+
+      <h2>2. Paytick Pro (Desktop-App)</h2>
+      <ul>
+        <li>Die Desktop-App ist kostenlos nutzbar. „Paytick Pro“ ist ein Einmalkauf (es gilt der beim Bezahlen angezeigte Preis inklusive lokaler Steuern), der die Pro-Funktionen dauerhaft freischaltet, ohne Abonnement.</li>
+        <li>Nach dem Kauf erhältst du einen Lizenzschlüssel per E-Mail. Ein Schlüssel kann auf 1 Computer aktiv sein. Um den Computer zu wechseln, deaktiviere ihn zuerst in der App auf dem alten Computer und aktiviere ihn dann auf dem neuen. Wir bieten keine Lizenzübertragungen an: Wenn der Schlüssel auf dem alten Computer nicht deaktiviert werden kann, kann er nicht auf einen neuen übertragen werden. Der Schlüssel ist nur für deine persönliche Nutzung bestimmt und darf weder weiterverkauft noch öffentlich geteilt werden.</li>
+        <li>Alle paar Tage prüft die App online, ob der Schlüssel noch gültig ist. Wenn er 30 Tage lang nicht geprüft werden kann, werden die Pro-Funktionen bis zur nächsten erfolgreichen Prüfung pausiert.</li>
+        <li>Wir können ändern, welche Funktionen Pro umfasst. Wenn du Pro bereits gekauft hast, verlierst du durch solche Änderungen keine Funktionen, die du bereits hast.</li>
+      </ul>
+
+      <h2>3. Zahlung</h2>
+      <p>Paytick Pro wird über Dodo Payments als Verkäufer (Merchant of Record) verkauft. Dodo Payments wickelt Zahlung, Rechnungsstellung und Steuern ab, und für deine Zahlung gelten außerdem die Käuferbedingungen von Dodo Payments.</p>
+
+      <h2>4. Rückerstattungen</h2>
+      <p>Siehe unsere <a href="../refund/?lang=de">Rückerstattungsrichtlinie</a>.</p>
+
+      <h2>5. Android-App und Werbung</h2>
+      <p>Die Android-App ist kostenlos. Einige Figuren, Farben und andere Inhalte können durch das Ansehen von Werbung mit Belohnung freigeschaltet werden. Freischaltungen werden auf deinem Handy gespeichert und müssen möglicherweise erneut freigeschaltet werden, wenn du die App deinstallierst oder ihre Daten löschst.</p>
+
+      <h2>6. Nur Schätzungen</h2>
+      <p>Die App schätzt deinen Verdienst anhand des Lohns und der Arbeitszeiten, die du eingibst. Die Ergebnisse dienen nur zur Orientierung und stellen keine Lohnabrechnung, Steuer- oder Finanzberatung dar. Maßgeblich ist die Zahlung deines Arbeitgebers.</p>
+
+      <h2>7. Haftungsausschluss</h2>
+      <p>Die App wird „wie besehen“ („as is“) bereitgestellt. Im größtmöglichen gesetzlich zulässigen Umfang haften wir nicht für indirekte Verluste, die sich aus deiner Nutzung der App ergeben, und unsere Gesamthaftung ist auf den Betrag begrenzt, den du tatsächlich für die App bezahlt hast. Nichts in diesen Bedingungen schränkt Verbraucherrechte ein, die gesetzlich nicht ausgeschlossen werden können (zum Beispiel Rechte nach dem neuseeländischen Consumer Guarantees Act).</p>
+
+      <h2>8. Änderungen</h2>
+      <p>Wir können die App oder diese Bedingungen aktualisieren. Wenn sich diese Bedingungen ändern, aktualisieren wir diese Seite und das oben angegebene Gültigkeitsdatum und erwähnen wesentliche Änderungen in den Versionshinweisen der App.</p>
+
+      <h2>9. Anwendbares Recht</h2>
+      <p>Diese Bedingungen unterliegen dem Recht Neuseelands.</p>
+
+      <h2>10. Kontakt</h2>
+      <p>Wenn du Fragen hast, schreib bitte eine E-Mail an <a href="mailto:happymoneyeverysecond@gmail.com">happymoneyeverysecond@gmail.com</a>.</p>
+    </article>
+
+    <!-- ───────────── Français ───────────── -->
+    <article lang="fr" data-lang="fr" hidden>
+      <h1>Conditions d’utilisation</h1>
+      <p class="date">Date d’entrée en vigueur : 23 octobre 2026</p>
+      <p class="note">Cette traduction est fournie pour ta commodité. En cas de divergence avec la version anglaise, c’est la version anglaise qui prévaut. <a href="?lang=en">Lire la version anglaise</a></p>
+
+      <p>Les présentes conditions s’appliquent à Paytick (nom chinois 秒薪), y compris l’application de bureau Windows et l’application Android (ensemble, « l’Application »). L’Application est développée et exploitée par Pengcheng Hu, développeur indépendant établi en Nouvelle-Zélande (« nous »). En téléchargeant, en installant ou en utilisant l’Application, tu acceptes ces conditions.</p>
+
+      <h2>1. Licence</h2>
+      <p>Nous t’accordons une licence personnelle, non exclusive et non transférable pour utiliser l’Application sur tes propres appareils. Tu ne peux pas vendre, louer ou redistribuer l’Application, en distribuer des versions modifiées, ni contourner l’activation de Pro ou les déblocages par publicité.</p>
+
+      <h2>2. Paytick Pro (application de bureau)</h2>
+      <ul>
+        <li>L’application de bureau est gratuite. « Paytick Pro » est un achat unique (le prix affiché lors du paiement s’applique, taxes locales comprises) qui débloque définitivement les fonctionnalités Pro, sans abonnement.</li>
+        <li>Après l’achat, tu reçois une clé de licence par e-mail. Une clé peut être active sur 1 ordinateur. Pour changer d’ordinateur, désactive-la d’abord dans l’Application sur l’ancien ordinateur, puis active-la sur le nouveau. Nous ne proposons pas de transfert de licence : si la clé ne peut pas être désactivée sur l’ancien ordinateur, elle ne peut pas être transférée sur un nouveau. La clé est réservée à ton usage personnel et ne peut être ni revendue ni partagée publiquement.</li>
+        <li>Tous les quelques jours, l’Application vérifie en ligne que la clé est toujours valide. Si elle ne peut pas être vérifiée pendant 30 jours, les fonctionnalités Pro sont suspendues jusqu’à la prochaine vérification réussie.</li>
+        <li>Nous pouvons modifier les fonctionnalités incluses dans Pro. Si tu as déjà acheté Pro, tu ne perdras pas, du fait de ces modifications, les fonctionnalités dont tu disposes déjà.</li>
+      </ul>
+
+      <h2>3. Paiement</h2>
+      <p>Paytick Pro est vendu par l’intermédiaire de Dodo Payments en tant que marchand officiel (merchant of record). Dodo Payments gère le paiement, la facturation et les taxes, et ses conditions applicables aux acheteurs s’appliquent également à ton paiement.</p>
+
+      <h2>4. Remboursements</h2>
+      <p>Consulte notre <a href="../refund/?lang=fr">Politique de remboursement</a>.</p>
+
+      <h2>5. Application Android et publicités</h2>
+      <p>L’application Android est gratuite. Certains personnages, couleurs et autres contenus peuvent être débloqués en regardant des publicités avec récompense. Les déblocages sont stockés sur ton téléphone et devront peut-être être refaits si tu désinstalles l’Application ou si tu effaces ses données.</p>
+
+      <h2>6. Simples estimations</h2>
+      <p>L’Application estime tes gains à partir du salaire et des horaires que tu saisis. Les résultats sont fournis à titre indicatif uniquement et ne constituent pas des conseils en matière de paie, de fiscalité ou de finances. Seul le paiement de ton employeur fait foi.</p>
+
+      <h2>7. Clause de non-responsabilité</h2>
+      <p>L’Application est fournie « en l’état ». Dans toute la mesure permise par la loi, nous ne sommes pas responsables des pertes indirectes résultant de ton utilisation de l’Application, et notre responsabilité totale est limitée au montant que tu as effectivement payé pour l’Application. Aucune disposition des présentes conditions ne limite les droits des consommateurs qui ne peuvent pas être exclus par la loi (par exemple, les droits prévus par la loi néo-zélandaise sur les garanties aux consommateurs, le Consumer Guarantees Act).</p>
+
+      <h2>8. Modifications</h2>
+      <p>Nous pouvons mettre à jour l’Application ou ces conditions. Si ces conditions changent, nous mettrons à jour cette page et la date d’entrée en vigueur indiquée ci-dessus, et nous mentionnerons les changements importants dans les notes de version de l’Application.</p>
+
+      <h2>9. Droit applicable</h2>
+      <p>Les présentes conditions sont régies par le droit de la Nouvelle-Zélande.</p>
+
+      <h2>10. Contact</h2>
+      <p>Pour toute question, envoie un e-mail à <a href="mailto:happymoneyeverysecond@gmail.com">happymoneyeverysecond@gmail.com</a>.</p>
+    </article>
+
+    <!-- ───────────── Português ───────────── -->
+    <article lang="pt" data-lang="pt" hidden>
+      <h1>Termos de Serviço</h1>
+      <p class="date">Data de vigência: 23 de outubro de 2026</p>
+      <p class="note">Esta é uma tradução oferecida para sua conveniência. Se houver divergência em relação à versão em inglês, prevalece a versão em inglês. <a href="?lang=en">Ler a versão em inglês</a></p>
+
+      <p>Estes termos se aplicam ao Paytick (nome chinês 秒薪), incluindo o app de desktop para Windows e o app para Android (em conjunto, “o App”). O App é desenvolvido e operado por Pengcheng Hu, desenvolvedor individual na Nova Zelândia (“nós”). Ao baixar, instalar ou usar o App, você concorda com estes termos.</p>
+
+      <h2>1. Licença</h2>
+      <p>Concedemos a você uma licença pessoal, não exclusiva e intransferível para usar o App nos seus próprios dispositivos. Você não pode vender, alugar nem redistribuir o App, distribuir versões modificadas dele, nem burlar a ativação do Pro ou os desbloqueios por anúncio.</p>
+
+      <h2>2. Paytick Pro (app de desktop)</h2>
+      <ul>
+        <li>O app de desktop é gratuito. O “Paytick Pro” é uma compra única (vale o preço exibido na finalização da compra, incluindo impostos locais) que desbloqueia os recursos Pro permanentemente, sem assinatura.</li>
+        <li>Após a compra, você recebe uma chave de licença por e-mail. Uma chave pode estar ativa em 1 computador. Para trocar de computador, primeiro desative a chave no App no computador antigo e depois ative-a no novo. Não oferecemos transferência de licenças: se a chave não puder ser desativada no computador antigo, ela não poderá ser transferida para um novo. A chave é apenas para seu uso pessoal e não pode ser revendida nem compartilhada publicamente.</li>
+        <li>A cada poucos dias, o App verifica on-line se a chave continua válida. Se não for possível verificá-la por 30 dias, os recursos Pro ficam pausados até a próxima verificação bem-sucedida.</li>
+        <li>Podemos alterar quais recursos o Pro inclui. Se você já comprou o Pro, não perderá recursos que já tem por causa dessas alterações.</li>
+      </ul>
+
+      <h2>3. Pagamento</h2>
+      <p>O Paytick Pro é vendido por meio da Dodo Payments na qualidade de merchant of record (o vendedor responsável pela transação). A Dodo Payments cuida do pagamento, da emissão de faturas e dos impostos, e os termos para compradores dela também se aplicam ao seu pagamento.</p>
+
+      <h2>4. Reembolsos</h2>
+      <p>Consulte nossa <a href="../refund/?lang=pt">Política de Reembolso</a>.</p>
+
+      <h2>5. App para Android e anúncios</h2>
+      <p>O app para Android é gratuito. Alguns personagens, cores e outros conteúdos podem ser desbloqueados assistindo a anúncios premiados. Os desbloqueios ficam armazenados no seu celular e talvez precisem ser feitos de novo se você desinstalar o App ou limpar os dados dele.</p>
+
+      <h2>6. Apenas estimativas</h2>
+      <p>O App estima seus ganhos com base no salário e no horário que você informa. Os resultados servem apenas como referência e não constituem folha de pagamento nem aconselhamento tributário ou financeiro. O que vale é o pagamento feito pelo seu empregador.</p>
+
+      <h2>7. Isenção de responsabilidade</h2>
+      <p>O App é fornecido “no estado em que se encontra”. Na extensão máxima permitida por lei, não nos responsabilizamos por perdas indiretas decorrentes do seu uso do App, e a nossa responsabilidade total se limita ao valor que você efetivamente pagou pelo App. Nada nestes termos limita direitos do consumidor que não possam ser excluídos por lei (por exemplo, direitos previstos na Lei de Garantias ao Consumidor da Nova Zelândia, a Consumer Guarantees Act).</p>
+
+      <h2>8. Alterações</h2>
+      <p>Podemos atualizar o App ou estes termos. Se estes termos mudarem, atualizaremos esta página e a data de vigência acima, e mencionaremos alterações significativas nas notas da versão do App.</p>
+
+      <h2>9. Lei aplicável</h2>
+      <p>Estes termos são regidos pelas leis da Nova Zelândia.</p>
+
+      <h2>10. Contato</h2>
+      <p>Se você tiver alguma dúvida, envie um e-mail para <a href="mailto:happymoneyeverysecond@gmail.com">happymoneyeverysecond@gmail.com</a>.</p>
+    </article>
   </main>
 
   <script>
-    // 显示哪种语言：网址里的 ?lang=en / ?lang=zh 优先（App 里的链接会带上），否则按浏览器语言
+    // 显示哪种语言：网址里的 ?lang=…优先（App 里的链接会带上），否则按浏览器语言；换语言时改网址，分享出去还是这个语言
     (function () {
-      var param = new URLSearchParams(location.search).get('lang');
-      var lang = param === 'en' || param === 'zh' ? param : /^zh/i.test(navigator.language || '') ? 'zh' : 'en';
-      function show(next) {
-        document.querySelectorAll('article[data-lang]').forEach(function (a) {
-          a.hidden = a.dataset.lang !== next;
-        });
-        document.querySelectorAll('.lang button').forEach(function (b) {
-          b.setAttribute('aria-pressed', String(b.dataset.lang === next));
-        });
-        document.documentElement.lang = next === 'zh' ? 'zh-CN' : 'en';
-        document.title = next === 'zh' ? '服务条款 · 秒薪 Paytick' : 'Terms of Service · Paytick';
+      var codes = ["zh", "zh-TW", "en", "ja", "ko", "es", "de", "fr", "pt"];
+      function detect(tag) {
+        tag = String(tag || '').toLowerCase().replace(/_/g, '-');
+        if (/^zh-(tw|hk|mo|hant)/.test(tag)) return 'zh-TW';
+        if (/^zh/.test(tag)) return 'zh';
+        var base = tag.split('-')[0];
+        return codes.indexOf(base) >= 0 ? base : 'en';
       }
-      document.querySelectorAll('.lang button').forEach(function (b) {
-        b.addEventListener('click', function () { show(b.dataset.lang); });
+      var param = new URLSearchParams(location.search).get('lang');
+      if (param === 'zh-CN') param = 'zh';
+      var select = document.querySelector('.lang select');
+      function show(next) {
+        var block;
+        document.querySelectorAll('main [data-lang]').forEach(function (el) {
+          el.hidden = el.dataset.lang !== next;
+          if (!el.hidden) block = el;
+        });
+        select.value = next;
+        document.documentElement.lang = block.lang;
+        document.title = block.querySelector('h1').textContent + (next === 'zh' || next === 'zh-TW' ? ' · 秒薪 Paytick' : ' · Paytick');
+      }
+      select.addEventListener('change', function () {
+        show(select.value);
+        history.replaceState(null, '', '?lang=' + select.value);
       });
-      show(lang);
+      show(codes.indexOf(param) >= 0 ? param : detect(navigator.language));
     })();
   </script>
 </body>
